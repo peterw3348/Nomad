@@ -1,0 +1,2722 @@
+{
+    "Aatrox": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Ahri": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Akali": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Akshan": {
+        "Primary": "Marksman",
+        "Secondary": "Assassin",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Alistar": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Amumu": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Anivia": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Annie": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Aphelios": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Ashe": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Aurelion Sol": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Aurora": {
+        "Primary": "Mage",
+        "Secondary": "Assassin",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Azir": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Bard": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Bel'Veth": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Blitzcrank": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Brand": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Braum": {
+        "Primary": "Warden",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Briar": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Caitlyn": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Camille": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 40,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Cassiopeia": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Cho'Gath": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Corki": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Darius": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Diana": {
+        "Primary": "Assassin",
+        "Secondary": "Diver",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Dr. Mundo": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Draven": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Ekko": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Elise": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Evelynn": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Ezreal": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Fiddlesticks": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Fiora": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Fizz": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Galio": {
+        "Primary": "Warden",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Gangplank": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Garen": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Gnar": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Gragas": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Graves": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Gwen": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 50,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Hecarim": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Heimerdinger": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Hwei": {
+        "Primary": "Artillery",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Illaoi": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Irelia": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Ivern": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 3
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Janna": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Jarvan IV": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Jax": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Jayce": {
+        "Primary": "Artillery",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Jhin": {
+        "Primary": "Marksman",
+        "Secondary": "Catcher",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Jinx": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "K'Sante": {
+        "Primary": "Warden",
+        "Secondary": "Skirmisher",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Kai'Sa": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Kalista": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Karma": {
+        "Primary": "Burst",
+        "Secondary": "Enchanter",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Karthus": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Kassadin": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Katarina": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Kayle": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kayn": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kennen": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Kha'Zix": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kindred": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Kled": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kled & Skaarl": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kog'Maw": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "LeBlanc": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Lee Sin": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Leona": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Lillia": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Lissandra": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Lucian": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Lulu": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Lux": {
+        "Primary": "Burst",
+        "Secondary": "Artillery",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Malphite": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Malzahar": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Maokai": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Master Yi": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Mega Gnar": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Milio": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Miss Fortune": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Mordekaiser": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Morgana": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Naafiri": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 70,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Nami": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Nasus": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Nautilus": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Neeko": {
+        "Primary": "Burst",
+        "Secondary": "Catcher",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Nidalee": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Nilah": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 25,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Nocturne": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Nunu & Willump": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Olaf": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Orianna": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Ornn": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 60,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Pantheon": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Poppy": {
+        "Primary": "Warden",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Pyke": {
+        "Primary": "Assassin",
+        "Secondary": "Catcher",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 50,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Qiyana": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 70,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Quinn": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Rakan": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 3,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Rammus": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Rek'Sai": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Rell": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 85,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Renata Glasc": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 80,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Renekton": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Rengar": {
+        "Primary": "Assassin",
+        "Secondary": "Diver",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Riven": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Rumble": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Ryze": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Samira": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Sejuani": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Senna": {
+        "Primary": "Marksman",
+        "Secondary": "Enchanter",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Seraphine": {
+        "Primary": "Burst",
+        "Secondary": "Enchanter",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Sett": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 40,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Shaco": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Shen": {
+        "Primary": "Warden",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 3
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Shyvana": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Singed": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Sion": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Sivir": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Skarner": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Smolder": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Sona": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Soraka": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Swain": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Sylas": {
+        "Primary": "Burst",
+        "Secondary": "Skirmisher",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 70,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Syndra": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Tahm Kench": {
+        "Primary": "Warden",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Taliyah": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Talon": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Taric": {
+        "Primary": "Enchanter",
+        "Secondary": "Warden",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Teemo": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Thresh": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 75,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Tristana": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Trundle": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Tryndamere": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 10,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Twisted Fate": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Twitch": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Udyr": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 35,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Urgot": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Varus": {
+        "Primary": "Marksman",
+        "Secondary": "Artillery",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Vayne": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 0,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Veigar": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Vel'Koz": {
+        "Primary": "Artillery",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Vex": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Vi": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Viego": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Viktor": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Vladimir": {
+        "Primary": "Battlemage",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Volibear": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Warwick": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Wukong": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Xayah": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Xerath": {
+        "Primary": "Artillery",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Xin Zhao": {
+        "Primary": "Diver",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 35,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 1
+    },
+    "Yasuo": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 2
+        },
+        "Basic Attacks": "active",
+        "Style": 20,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Yone": {
+        "Primary": "Assassin",
+        "Secondary": "Skirmisher",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 45,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Yorick": {
+        "Primary": "Juggernaut",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 2,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 2
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Yuumi": {
+        "Primary": "Enchanter",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 1,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Zac": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 3,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 1
+    },
+    "Zed": {
+        "Primary": "Assassin",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 55,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 3
+    },
+    "Zeri": {
+        "Primary": "Marksman",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 3,
+            "Utility": 0
+        },
+        "Basic Attacks": "active",
+        "Style": 35,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Ziggs": {
+        "Primary": "Artillery",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 90,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Zilean": {
+        "Primary": "Specialist",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 3
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    },
+    "Zoe": {
+        "Primary": "Burst",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 2,
+            "Mobility": 2,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 3
+    },
+    "Zyra": {
+        "Primary": "Catcher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 1,
+            "Control": 3,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 100,
+        "Abilities": "active",
+        "Damage Type": "Magic",
+        "Difficulty": 2
+    }
+}

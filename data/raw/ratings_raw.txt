@@ -1,0 +1,510 @@
+Aatrox Aatrox	Fighter icon Juggernaut		3	3	2	2	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Ahri Ahri	Mage icon Burst		3	1	2	3	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Akali Akali	Slayer icon Assassin		3	1	1	3	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	2
+Akshan Akshan	Marksman icon Marksman	Slayer icon Assassin	3	1	1	3	2	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	3
+Alistar Alistar	Tank icon Vanguard		1	3	3	1	2	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	1
+Amumu Amumu	Tank icon Vanguard		2	3	3	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	1
+Anivia Anivia	Mage icon Battlemage		3	1	3	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	3
+Annie Annie	Mage icon Burst		3	1	3	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Aphelios Aphelios	Marksman icon Marksman		3	1	2	1	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	3
+Ashe Ashe	Marksman icon Marksman		2	1	3	1	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	1
+Aurelion Sol Aurelion Sol	Mage icon Battlemage		3	1	2	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	3
+Aurora Aurora	Mage icon Mage	Slayer icon Assassin	3	1	2	3	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Azir Azir	Specialist icon Specialist		3	1	2	2	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Magic	3
+Bard Bard	Controller icon Catcher		1	1	3	2	3	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	3
+Bel'Veth Bel'Veth	Slayer icon Skirmisher		3	1	2	3	1	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	2
+Blitzcrank Blitzcrank	Controller icon Catcher		1	2	3	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	1
+Brand Brand	Mage icon Burst		3	1	2	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Braum Braum	Tank icon Warden		1	2	3	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Briar Briar	Fighter icon Diver		2	2	3	3	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+Caitlyn Caitlyn	Marksman icon Marksman		3	1	2	2	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	1
+Camille Camille	Fighter icon Diver		3	2	2	3	1	
+Champion style basic attacks active Champion style 40 Champion style abilities inactive
+	Physical	3
+Cassiopeia Cassiopeia	Mage icon Battlemage		3	1	3	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	3
+Cho'Gath Cho'Gath	Specialist icon Specialist		2	3	2	1	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	1
+Corki Corki	Marksman icon Marksman		3	1	1	2	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	2
+Darius Darius	Fighter icon Juggernaut		3	2	2	1	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	2
+Diana Diana	Slayer icon Assassin	Fighter icon Diver	3	2	2	2	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	1
+Dr. Mundo Dr. Mundo	Fighter icon Juggernaut		2	3	1	1	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	1
+Draven Draven	Marksman icon Marksman		3	1	1	2	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+Ekko Ekko	Slayer icon Assassin		3	2	2	3	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	3
+Elise Elise	Fighter icon Diver		2	2	2	2	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	2
+Evelynn Evelynn	Slayer icon Assassin		2	2	1	2	2	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	2
+Ezreal Ezreal	Marksman icon Marksman		3	1	1	3	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	1
+Fiddlesticks Fiddlesticks	Specialist icon Specialist		3	1	3	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Fiora Fiora	Slayer icon Skirmisher		3	2	2	2	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Fizz Fizz	Slayer icon Assassin		3	1	2	3	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Galio Galio	Tank icon Warden		2	3	3	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Gangplank Gangplank	Specialist icon Specialist		3	1	1	1	2	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	3
+Garen Garen	Fighter icon Juggernaut		2	3	1	1	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	1
+Gnar Gnar	Specialist icon Specialist		2	1	1	2	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	3
+Gragas Gragas	Tank icon Vanguard		2	3	3	2	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Graves Graves	Specialist icon Specialist		3	2	1	2	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Gwen Gwen	Slayer icon Skirmisher		3	2	1	3	1	
+Champion style basic attacks active Champion style 50 Champion style abilities active
+	Magic	2
+Hecarim Hecarim	Fighter icon Diver		2	2	2	2	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	2
+Heimerdinger Heimerdinger	Specialist icon Specialist		3	1	2	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Hwei Hwei	Mage icon Artillery		3	1	3	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	3
+Illaoi Illaoi	Fighter icon Juggernaut		3	2	1	1	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	2
+Irelia Irelia	Fighter icon Diver		2	2	2	3	2	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Ivern Ivern	Controller icon Catcher		1	1	3	2	3	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Magic	3
+Janna Janna	Controller icon Enchanter		1	1	3	1	3	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Jarvan IV Jarvan IV	Fighter icon Diver		2	2	2	2	2	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	1
+Jax Jax	Slayer icon Skirmisher		3	2	2	2	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	1
+Jayce Jayce	Mage icon Artillery		3	1	1	2	2	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	2
+Jhin Jhin	Marksman icon Marksman	Controller icon Catcher	3	1	2	1	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Jinx Jinx	Marksman icon Marksman		3	1	2	1	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+K'Sante K'Sante	Tank icon Warden	Slayer icon Skirmisher	2	3	3	2	2	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	3
+Kai'Sa Kai'Sa	Marksman icon Marksman		3	1	1	3	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Magic	2
+Kalista Kalista	Marksman icon Marksman		3	1	1	3	2	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	3
+Karma Karma	Mage icon Burst	Controller icon Enchanter	2	1	2	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Karthus Karthus	Mage icon Battlemage		3	1	1	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Kassadin Kassadin	Slayer icon Assassin		3	2	1	3	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Katarina Katarina	Slayer icon Assassin		3	1	1	3	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Kayle Kayle	Specialist icon Specialist		3	1	1	1	3	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Kayn Kayn	Slayer icon Skirmisher		3	1	1	3	1	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	2
+Kennen Kennen	Specialist icon Specialist		3	1	3	1	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	2
+Kha'Zix Kha'Zix	Slayer icon Assassin		3	1	1	2	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	2
+Kindred Kindred	Marksman icon Marksman		3	1	2	3	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	3
+Kled Kled	Slayer icon Skirmisher		3	2	1	2	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Kled & Skaarl Kled & Skaarl	Slayer icon Skirmisher		3	2	1	3	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Kog'Maw Kog'Maw	Marksman icon Marksman		3	1	1	1	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+LeBlanc LeBlanc	Mage icon Burst		3	1	2	3	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Lee Sin Lee Sin	Fighter icon Diver		3	2	2	3	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	2
+Leona Leona	Tank icon Vanguard		1	3	3	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Physical	1
+Lillia Lillia	Slayer icon Skirmisher		3	1	2	2	2	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	3
+Lissandra Lissandra	Mage icon Burst		3	1	3	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Lucian Lucian	Marksman icon Marksman		3	1	1	3	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Lulu Lulu	Controller icon Enchanter		2	1	2	1	3	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	2
+Lux Lux	Mage icon Burst	Mage icon Artillery	3	1	2	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	1
+Malphite Malphite	Tank icon Vanguard		1	3	3	1	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	1
+Malzahar Malzahar	Mage icon Battlemage		3	1	3	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Maokai Maokai	Tank icon Vanguard		1	3	3	1	2	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	1
+Master Yi Master Yi	Slayer icon Skirmisher		3	1	1	2	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	1
+Mega Gnar Mega Gnar	Tank icon Vanguard		2	3	2	1	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	2
+Milio Milio	Controller icon Enchanter		1	1	2	3	3	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	1
+Miss Fortune Miss Fortune	Marksman icon Marksman		3	1	1	1	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Mordekaiser Mordekaiser	Fighter icon Juggernaut		3	2	1	1	2	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	2
+Morgana Morgana	Controller icon Catcher		2	1	3	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Naafiri Naafiri	Slayer icon Assassin		3	1	1	3	1	
+Champion style basic attacks inactive Champion style 70 Champion style abilities active
+	Physical	1
+Nami Nami	Controller icon Enchanter		1	1	3	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Nasus Nasus	Fighter icon Juggernaut		2	3	2	1	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	1
+Nautilus Nautilus	Tank icon Vanguard		1	3	3	1	1	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	2
+Neeko Neeko	Mage icon Burst	Controller icon Catcher	3	1	3	1	1	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	1
+Nidalee Nidalee	Specialist icon Specialist		3	1	1	3	2	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	2
+Nilah Nilah	Slayer icon Skirmisher		3	1	1	3	2	
+Champion style basic attacks active Champion style 25 Champion style abilities inactive
+	Physical	3
+Nocturne Nocturne	Slayer icon Assassin		3	1	2	2	2	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Nunu & Willump Nunu & Willump	Tank icon Vanguard		1	3	2	1	2	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	1
+Olaf Olaf	Fighter icon Diver		2	2	2	1	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Orianna Orianna	Mage icon Burst		2	1	2	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Ornn Ornn	Tank icon Vanguard		1	3	3	1	2	
+Champion style basic attacks inactive Champion style 60 Champion style abilities active
+	Physical	2
+Pantheon Pantheon	Fighter icon Diver		3	2	2	2	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	1
+Poppy Poppy	Tank icon Warden		2	3	3	2	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	2
+Pyke Pyke	Slayer icon Assassin	Controller icon Catcher	2	1	3	3	1	
+Champion style basic attacks active Champion style 50 Champion style abilities active
+	Physical	2
+Qiyana Qiyana	Slayer icon Assassin		3	1	2	2	1	
+Champion style basic attacks inactive Champion style 70 Champion style abilities active
+	Physical	3
+Quinn Quinn	Specialist icon Specialist		3	1	2	3	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Rakan Rakan	Controller icon Catcher		1	2	3	3	3	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Rammus Rammus	Tank icon Vanguard		2	3	3	2	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	1
+Rek'Sai Rek'Sai	Fighter icon Diver		2	2	2	2	2	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Rell Rell	Tank icon Vanguard		1	3	3	2	2	
+Champion style basic attacks inactive Champion style 85 Champion style abilities active
+	Magic	2
+Renata Glasc Renata Glasc	Controller icon Enchanter		2	1	3	1	2	
+Champion style basic attacks inactive Champion style 80 Champion style abilities active
+	Magic	2
+Renekton Renekton	Fighter icon Diver		2	2	2	2	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	1
+Rengar Rengar	Slayer icon Assassin	Fighter icon Diver	3	1	2	2	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Riven Riven	Slayer icon Skirmisher		3	2	2	3	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	2
+Rumble Rumble	Mage icon Battlemage		3	2	2	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Ryze Ryze	Mage icon Battlemage		3	1	2	2	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Samira Samira	Marksman icon Marksman		3	2	1	3	1	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	2
+Sejuani Sejuani	Tank icon Vanguard		2	2	3	2	1	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Magic	2
+Senna Senna	Marksman icon Marksman	Controller icon Enchanter	2	1	2	1	3	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Seraphine Seraphine	Mage icon Burst	Controller icon Enchanter	3	1	3	1	2	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Sett Sett	Fighter icon Juggernaut		2	2	2	2	1	
+Champion style basic attacks active Champion style 40 Champion style abilities inactive
+	Physical	2
+Shaco Shaco	Slayer icon Assassin		3	1	2	2	2	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	2
+Shen Shen	Tank icon Warden		2	3	2	2	3	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	2
+Shyvana Shyvana	Fighter icon Juggernaut		2	2	1	2	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	1
+Singed Singed	Specialist icon Specialist		2	3	2	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Sion Sion	Tank icon Vanguard		2	3	3	1	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	1
+Sivir Sivir	Marksman icon Marksman		3	1	1	1	2	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+Skarner Skarner	Tank icon Vanguard		2	3	3	2	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	2
+Smolder Smolder	Marksman icon Marksman		3	1	1	1	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	2
+Sona Sona	Controller icon Enchanter		2	1	2	1	2	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	1
+Soraka Soraka	Controller icon Enchanter		1	1	2	1	3	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Swain Swain	Mage icon Battlemage		2	2	2	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Sylas Sylas	Mage icon Burst	Slayer icon Skirmisher	2	2	1	3	1	
+Champion style basic attacks inactive Champion style 70 Champion style abilities active
+	Magic	3
+Syndra Syndra	Mage icon Burst		3	1	2	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Tahm Kench Tahm Kench	Tank icon Warden		2	3	2	1	3	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	1
+Taliyah Taliyah	Mage icon Battlemage		3	1	2	1	3	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Talon Talon	Slayer icon Assassin		3	1	1	2	1	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Physical	2
+Taric Taric	Controller icon Enchanter	Tank icon Warden	1	2	2	1	3	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	2
+Teemo Teemo	Specialist icon Specialist		3	1	2	1	2	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Thresh Thresh	Controller icon Catcher		1	2	3	1	3	
+Champion style basic attacks inactive Champion style 75 Champion style abilities active
+	Physical	3
+Tristana Tristana	Marksman icon Marksman		3	1	2	2	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	1
+Trundle Trundle	Fighter icon Juggernaut		2	3	1	1	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	1
+Tryndamere Tryndamere	Slayer icon Skirmisher		3	2	1	2	1	
+Champion style basic attacks active Champion style 10 Champion style abilities inactive
+	Physical	1
+Twisted Fate Twisted Fate	Mage icon Burst		3	1	2	2	2	
+Champion style basic attacks inactive Champion style 65 Champion style abilities active
+	Magic	2
+Twitch Twitch	Marksman icon Marksman		3	1	1	2	1	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	2
+Udyr Udyr	Fighter icon Juggernaut		2	3	2	2	1	
+Champion style basic attacks active Champion style 35 Champion style abilities inactive
+	Physical	1
+Urgot Urgot	Fighter icon Juggernaut		2	2	2	1	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	2
+Varus Varus	Marksman icon Marksman	Mage icon Artillery	3	1	2	1	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	2
+Vayne Vayne	Marksman icon Marksman		3	1	2	2	1	
+Champion style basic attacks active Champion style 0 Champion style abilities inactive
+	Physical	2
+Veigar Veigar	Mage icon Burst		3	1	3	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Vel'Koz Vel'Koz	Mage icon Artillery		3	1	2	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Vex Vex	Mage icon Burst		3	2	2	2	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Vi Vi	Fighter icon Diver		2	2	3	2	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	1
+Viego Viego	Slayer icon Skirmisher		3	1	2	2	1	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	3
+Viktor Viktor	Mage icon Battlemage		3	1	2	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	3
+Vladimir Vladimir	Mage icon Battlemage		3	2	1	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Volibear Volibear	Fighter icon Juggernaut		2	3	2	2	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Warwick Warwick	Fighter icon Diver		2	2	2	1	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	1
+Wukong Wukong	Fighter icon Diver		2	2	2	2	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	1
+Xayah Xayah	Marksman icon Marksman		3	2	3	1	1	
+Champion style basic attacks active Champion style 30 Champion style abilities inactive
+	Physical	2
+Xerath Xerath	Mage icon Artillery		3	1	2	1	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Xin Zhao Xin Zhao	Fighter icon Diver		2	2	2	2	1	
+Champion style basic attacks active Champion style 35 Champion style abilities inactive
+	Physical	1
+Yasuo Yasuo	Slayer icon Skirmisher		3	1	2	3	2	
+Champion style basic attacks active Champion style 20 Champion style abilities inactive
+	Physical	3
+Yone Yone	Slayer icon Assassin	Slayer icon Skirmisher	3	1	2	3	1	
+Champion style basic attacks active Champion style 45 Champion style abilities inactive
+	Physical	3
+Yorick Yorick	Fighter icon Juggernaut		2	2	2	1	2	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	2
+Yuumi Yuumi	Controller icon Enchanter		1	1	1	3	3	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Zac Zac	Tank icon Vanguard		2	3	3	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	1
+Zed Zed	Slayer icon Assassin		3	1	1	3	1	
+Champion style basic attacks inactive Champion style 55 Champion style abilities active
+	Physical	3
+Zeri Zeri	Marksman icon Marksman		2	1	2	3	0	
+Champion style basic attacks active Champion style 35 Champion style abilities inactive
+	Physical	2
+Ziggs Ziggs	Mage icon Artillery		3	1	2	2	1	
+Champion style basic attacks inactive Champion style 90 Champion style abilities active
+	Magic	2
+Zilean Zilean	Specialist icon Specialist		2	1	2	2	3	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
+Zoe Zoe	Mage icon Burst		3	1	2	2	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	3
+Zyra Zyra	Controller icon Catcher		3	1	3	1	1	
+Champion style basic attacks inactive Champion style 100 Champion style abilities active
+	Magic	2
