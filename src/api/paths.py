@@ -1,7 +1,7 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-API_DIR = BASE_DIR / "src" / "api"
+API_DIR = Path(__file__).resolve()
+BASE_DIR = API_DIR.parent.parent.parent
 DATA_DIR = BASE_DIR / "data"
 
 def print_dirs():

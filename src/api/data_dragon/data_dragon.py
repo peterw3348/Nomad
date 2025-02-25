@@ -4,13 +4,15 @@ import os
 
 from src.api import paths
 
-CHAMPION_URL = "https://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json"
+CHAMPION_URL = "https://ddragon.leagueoflegends.com/cdn/15.4.1/data/en_US/champion.json"
 
 def get_champion_names():
     response = requests.get(CHAMPION_URL)
     if response.status_code == 200:
         data = response.json()
-        champions = [champ for champ in data["data"]]
+        champions = {}
+        for champ in data["data"]:
+            champions[int(data["data"][champ]["key"])] = champ
         return champions
     else:
         print("Failed to fetch champion data:", response.status_code)
