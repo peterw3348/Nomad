@@ -1,0 +1,22 @@
+Current Summoner: https://riot:tQSyw1A38umiipznLUsxZQ@127.0.0.1:63514/lol-summoner/v1/current-summoner
+Champ Select Data: https://riot:tQSyw1A38umiipznLUsxZQ@127.0.0.1:63514/lol-champ-select/v1/session
+
+To use these URLs, need to have client open and also retrieve port number and password
+
+https://riot:password@127.0.0.1:port_number
+
+1. lockfile
+
+lockfile has info about port # and password
+
+from Riot Games\League of Legends\lockfile
+LeagueClient:27404:58074:wKgOvW7W2da2dVPS_L_l2w:https
+
+2. from process
+
+run in commandline
+wmic PROCESS WHERE name='LeagueClientUx.exe' GET commandline
+
+do a regex search for 
+--app-port= followed by a number (--app-port=([0-9]*)) and,
+--remoting-auth-token= followed by a string (--remoting-auth-token=([\w-]*))
