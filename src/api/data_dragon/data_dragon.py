@@ -12,7 +12,7 @@ def get_champion_names():
         data = response.json()
         champions = {}
         for champ in data["data"]:
-            champions[int(data["data"][champ]["key"])] = champ
+            champions[data["data"][champ]["key"]] = champ
         return champions
     else:
         print("Failed to fetch champion data:", response.status_code)
