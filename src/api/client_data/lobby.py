@@ -19,7 +19,6 @@ def fetch_lobby_champions(port, password):
         if response.status_code == 200:
             return response.json()
         else:
-            print("Failed to retrieve lobby data:", response.status_code)
             return None
     except requests.RequestException as e:
         print("Error fetching data:", e)
@@ -27,7 +26,7 @@ def fetch_lobby_champions(port, password):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python script.py <port> <password>")
+        print("Usage: python lobby.py <port> <password>")
         sys.exit(1)
 
     port = sys.argv[1]

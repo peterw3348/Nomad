@@ -20,8 +20,11 @@ def get_lcu_credentials():
         token_match = re.search(r"--remoting-auth-token=([\w-]*)", output)
 
         if port_match and token_match:
-            print(f"Port: {port_match.group(1)}")
-            print(f"Password: {token_match.group(1)}")
+            port = port_match.group(1)
+            password = token_match.group(1)
+            print(f"Port: {port}")
+            print(f"Password: {password}")
+            return port, password
         else:
             print("Could not extract credentials.")
     except Exception as e:
