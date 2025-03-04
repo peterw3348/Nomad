@@ -8,23 +8,28 @@ def extract_champion_ids(data):
 
     for key in keys_to_check:
         if key in data:
-            extracted[key] = [{"championId": champ["championId"]} for champ in data[key] if champ.get("championId")]
+            extracted[key] = [{"championId": champ["championId"], "puuid": champ.get("puuid", "")} for champ in data[key] if champ.get("championId")]
 
     return extracted
 
-def group_champion_ids(data):
-    grouped = {"team": [], "bench": []}
+def group_champion_ids(data, player_puuid):
+    grouped = {"team": [], "bench": [], "player": []}
 
     if "myTeam" in data:
-        grouped["team"] = [champ["championId"] for champ in data["myTeam"] if champ.get("championId")]
+        for champ in data["myTeam"]:
+            if champ.get("championId"):
+                if champ.get("puuid") == player_puuid:
+                    grouped["player"].append(champ["championId"])
+                grouped["team"].append(champ["championId"])
+
     if "benchChampions" in data:
         grouped["bench"] = [champ["championId"] for champ in data["benchChampions"] if champ.get("championId")]
 
     return grouped
 
-def sanitize_champion_data(data):
+def sanitize_champion_data(data, player_puuid):
     extracted = extract_champion_ids(data)
-    grouped = group_champion_ids(extracted)
+    grouped = group_champion_ids(extracted, player_puuid)
     return grouped
 
 if __name__ == "__main__":
@@ -36,8 +41,9 @@ if __name__ == "__main__":
     else:
         with input_file.open("r") as f:
             data = json.load(f)
-
-        sanitized_data = sanitize_champion_data(data)
+        
+        player_puuid = "15c66f9d-0464-513f-a881-a72d40386dbd"
+        sanitized_data = sanitize_champion_data(data, player_puuid)
 
         with output_file.open("w") as f:
             json.dump(sanitized_data, f, indent=2)

@@ -6,13 +6,13 @@ import csv
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-from src.api.client_data.acquire import get_lcu_credentials
+from src.api.client_data.acquire import get_credentials
 from src.api.client_data.lobby import fetch_lobby_champions
 from src.api.client_data.sanitize import sanitize_champion_data
 from src.api.client_data.status import Status, get_status
 from src.api import paths
 
-MAX_RETRIES = 20
+MAX_RETRIES = 3
 WAIT_INTERVAL = 10  # Time between status checks
 POLL_INTERVAL = 1   # Time between lobby fetch attempts
 MAX_FAILS_BEFORE_EXIT = 10  # Stop retrying after too many failures
@@ -54,12 +54,13 @@ def display_lobby_champions(sanitized_data, wr):
 
     sorted_team = sort_by_wr(grouped["team"])
     sorted_bench = sort_by_wr(grouped["bench"])
+    player_champ = grouped["player"][0] if grouped["player"] else None
 
     while len(sorted_bench) < 10:
         sorted_bench.append(None)  # Fill with empty placeholders
 
     output_lines = ["\nChampion Select:"]
-    output_lines.append(f"{'Team':<20} {'Win Rate':<8} | {'Bench':<20} {'Win Rate':<8} | {'Bench':<20} {'Win Rate':<8}")
+    output_lines.append(f" {'Team':<20} {'Win Rate':<8} | {'Bench':<20} {'Win Rate':<8}  | {'Bench':<20} {'Win Rate':<8}")
     output_lines.append("-" * 80)
 
     for i in range(max(len(sorted_team), 5)):
@@ -67,7 +68,7 @@ def display_lobby_champions(sanitized_data, wr):
         bench_champ_1 = sorted_bench[i] if i < len(sorted_bench) else None
         bench_champ_2 = sorted_bench[i + 5] if i + 5 < len(sorted_bench) else None
 
-        team_text = f"{wr.get(team_champ, ('Unknown', 0))[0]:<20} {wr.get(team_champ, ('Unknown', 0))[1]:<8.1f}%" if team_champ else " " * 30
+        team_text = f"{'> ' if team_champ == player_champ else '  '}{wr.get(team_champ, ('Unknown', 0))[0]:<18} {wr.get(team_champ, ('Unknown', 0))[1]:<8.1f}%" if team_champ else " " * 30
         bench_text_1 = f"{wr.get(bench_champ_1, ('', 0))[0]:<20} {wr.get(bench_champ_1, ('', 0))[1]:<8.1f}%" if bench_champ_1 else " " * 30
         bench_text_2 = f"{wr.get(bench_champ_2, ('', 0))[0]:<20} {wr.get(bench_champ_2, ('', 0))[1]:<8.1f}%" if bench_champ_2 else " " * 30
 
@@ -78,10 +79,10 @@ def display_lobby_champions(sanitized_data, wr):
 
 def get_credentials_with_retries():
     for attempt in range(1, MAX_RETRIES + 1):
-        credentials = get_lcu_credentials()
-        if credentials:
+        port, password, puuid = get_credentials()
+        if port and password and puuid:
             print(f"Successfully acquired credentials.")
-            return credentials
+            return port, password, puuid
         print(f"Attempt {attempt} failed. Retrying...")
         animated_waiting("Retrying credentials")
 
@@ -96,7 +97,7 @@ def wait_for_champ_select(port, password):
             return
         animated_waiting("Waiting for next Champion Select...")
 
-def monitor_lobby(port, password, wr):
+def monitor_lobby(port, password, wr, puuid):
     while True:
         wait_for_champ_select(port, password)
 
@@ -114,7 +115,7 @@ def monitor_lobby(port, password, wr):
 
             if lobby_data:
                 sys.stdout.write("\rLobby data fetched successfully.          \n")
-                sanitized_data = sanitize_champion_data(lobby_data)
+                sanitized_data = sanitize_champion_data(lobby_data, puuid)
                 display_lobby_champions(sanitized_data, wr)
                 failure_count = 0
             else:
@@ -128,8 +129,8 @@ def monitor_lobby(port, password, wr):
 
 def main():
     wr = load_win_rate()
-    port, password = get_credentials_with_retries()
-    monitor_lobby(port, password, wr)
+    port, password, puuid = get_credentials_with_retries()
+    monitor_lobby(port, password, wr, puuid)
 
 if __name__ == "__main__":
     main()
