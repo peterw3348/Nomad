@@ -1,6 +1,6 @@
 import json
 from src.utils import paths
-from src.api import converter
+from src.utils import converter
 
 def extract_champion_ids(data):
     keys_to_check = ["benchChampions", "myTeam"]
