@@ -18,34 +18,34 @@ POLL_INTERVAL = 1   # Time between lobby fetch attempts
 MAX_FAILS_BEFORE_EXIT = 10  # Stop retrying after too many failures
 WR_PATH = paths.DATA_DIR / "static" / "dd_wr.csv"
 
-def animated_waiting(message="Waiting", duration=WAIT_INTERVAL):
-    """Displays a rotating spinner animation while waiting."""
-    spinner = itertools.cycle(["|", "/", "-", "\\"])
-    end_time = time.time() + duration
-    while time.time() < end_time:
-        sys.stdout.write(f"\r{message} {next(spinner)} ")
-        sys.stdout.flush()
-        time.sleep(0.2)
-    sys.stdout.write("\r" + " " * (len(message) + 2) + "\r")
+# Store last fetched data to prevent redundant reprints
+previous_lobby_data = None  
 
 def load_win_rate(file_path=WR_PATH):
     win_rate_dict = {}
-    
+
     with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
         next(reader)  # Skip header
-        
+
         for row in reader:
             if len(row) < 4:
                 print("Error: Misaligned row")
                 continue
             name, key, win_rate, _ = row[:4]
             win_rate_dict[int(key)] = (name, float(win_rate.strip('%')))
-    
+
     return win_rate_dict
 
 def display_lobby_champions(sanitized_data, wr):
-    """Displays Team and Bench champions in a structured format with sorting and placeholders."""
+    """Displays Team and Bench champions in a structured format, only if there are changes."""
+    global previous_lobby_data
+
+    if sanitized_data == previous_lobby_data:
+        return  # Do nothing if the lobby data is the same
+
+    previous_lobby_data = sanitized_data  # Update previous state
+
     grouped = sanitized_data
 
     def sort_by_wr(champ_list):
@@ -58,6 +58,10 @@ def display_lobby_champions(sanitized_data, wr):
 
     while len(sorted_bench) < 10:
         sorted_bench.append(None)  # Fill with empty placeholders
+
+    # Clear terminal screen to overwrite previous output
+    sys.stdout.write("\033c")  # Clears terminal (works on most systems)
+    sys.stdout.flush()
 
     output_lines = ["\nChampion Select:"]
     output_lines.append(f" {'Team':<20} {'Win Rate':<8} | {'Bench':<20} {'Win Rate':<8}  | {'Bench':<20} {'Win Rate':<8}")
@@ -74,28 +78,19 @@ def display_lobby_champions(sanitized_data, wr):
 
         output_lines.append(f"{team_text} | {bench_text_1} | {bench_text_2}")
 
-    sys.stdout.write("\r" + "\n".join(output_lines) + "\n")
+    sys.stdout.write("\n".join(output_lines) + "\n")
     sys.stdout.flush()
 
-def get_credentials_with_retries():
-    for attempt in range(1, MAX_RETRIES + 1):
-        port, password, puuid = get_credentials()
-        if port and password and puuid:
-            print(f"Successfully acquired credentials.")
-            return port, password, puuid
-        print(f"Attempt {attempt} failed. Retrying...")
-        animated_waiting("Retrying credentials")
-
-    print("Failed to acquire LCU credentials after multiple attempts. Exiting.")
-    sys.exit(0)
-
 def wait_for_champ_select(port, password):
+    """Waits for the game to enter champion select before proceeding."""
     while True:
         status = get_status(port, password)
         if status == Status.CHAMPSELECT.value:
             print("\nChampion Select detected. Fetching lobby data...")
             return
-        animated_waiting("Waiting for next Champion Select...")
+        sys.stdout.write("\rWaiting for Champion Select... ")
+        sys.stdout.flush()
+        time.sleep(WAIT_INTERVAL)
 
 def monitor_lobby(port, password, wr, puuid):
     while True:
@@ -108,13 +103,9 @@ def monitor_lobby(port, password, wr, puuid):
                 print("\nChampion Select ended. Waiting for next game...\n")
                 break
 
-            sys.stdout.write("\rFetching lobby data... ")
-            sys.stdout.flush()
-
             lobby_data = fetch_lobby_champions(port, password)
 
             if lobby_data:
-                sys.stdout.write("\rLobby data fetched successfully.          \n")
                 sanitized_data = sanitize_champion_data(lobby_data, puuid)
                 display_lobby_champions(sanitized_data, wr)
                 failure_count = 0
@@ -123,13 +114,12 @@ def monitor_lobby(port, password, wr, puuid):
                 if failure_count >= MAX_FAILS_BEFORE_EXIT:
                     print("\nFailed to fetch lobby data multiple times. Exiting early.")
                     return
-                animated_waiting("Waiting for lobby data...")
 
             time.sleep(POLL_INTERVAL)
 
 def main():
     wr = load_win_rate()
-    port, password, puuid = get_credentials_with_retries()
+    port, password, puuid = get_credentials()
     monitor_lobby(port, password, wr, puuid)
 
 if __name__ == "__main__":
