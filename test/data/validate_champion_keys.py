@@ -1,5 +1,5 @@
 import json
-from src.api import paths
+from src.utils import paths
 
 with open("champions.json", "r") as file:
     champions = json.load(file)

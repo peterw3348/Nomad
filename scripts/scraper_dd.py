@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-from src.api import paths
+from src.utils import paths
 
 def scrape_champion_cells(url):
     options = Options()

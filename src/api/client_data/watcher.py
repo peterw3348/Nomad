@@ -10,7 +10,7 @@ from src.api.client_data.acquire import get_credentials
 from src.api.client_data.lobby import fetch_lobby_champions
 from src.api.client_data.sanitize import sanitize_champion_data
 from src.api.client_data.status import Status, get_status
-from src.api import paths
+from src.utils import paths
 
 MAX_RETRIES = 3
 WAIT_INTERVAL = 10  # Time between status checks

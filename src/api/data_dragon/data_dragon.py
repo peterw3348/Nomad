@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-from src.api import paths
+from src.utils import paths
 
 CHAMPION_URL = "https://ddragon.leagueoflegends.com/cdn/15.4.1/data/en_US/champion.json"
 
