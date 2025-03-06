@@ -1,6 +1,6 @@
 import re
 import json
-from champion import Champion
+from scripts.champion_old import Champion
 
 input_file = "data/raw/ratings_raw.txt"
 output_file = "data/static/champion_ratings.json"
