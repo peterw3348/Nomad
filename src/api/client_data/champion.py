@@ -2,7 +2,7 @@ import json
 
 from src.utils import paths
 
-DATA_PATH = paths.DATA_DIR / "static" / "champion_rating_final.json"
+DATA_PATH = paths.STATIC_DIR / "champion_rating_final.json"
 
 class Champ:
     _champs = None  # Cached
@@ -24,6 +24,8 @@ class Champ:
         self.raw_wr = None
         self.norm_gain = None
         self.norm_wr = None
+        self.flags = []
+        self.score = None
 
     def __repr__(self):
         return f"Champ({self.cid}, {self.name})"
@@ -60,6 +62,8 @@ class Champ:
         Raw WR: {self.raw_wr}
         Norm Gain: {self.norm_gain}
         Norm WR: {self.norm_wr}
+        Flags: {self.flags}
+        Score: {self.score}
         """
         print(info)
 

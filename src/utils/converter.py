@@ -5,7 +5,7 @@ def load_champion_mapping():
     """
     Loads the champion ID-to-name mapping from data/champions.json.
     """
-    champions_file = paths.DATA_DIR / "static" / "champions.json"
+    champions_file = paths.STATIC_DIR / "champions.json"
     
     if not champions_file.exists():
         print(f"Error: {champions_file} not found.")

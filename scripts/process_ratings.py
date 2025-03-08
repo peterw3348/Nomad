@@ -1,9 +1,10 @@
 import re
 import json
 from scripts.champion_old import Champion
+from src.utils import paths
 
-input_file = "data/raw/ratings_raw.txt"
-output_file = "data/static/champion_ratings.json"
+input_file = paths.RAW_DIR / "ratings_raw.txt"
+output_file = paths.STATIC_DIR / "champion_ratings.json"
 
 def process_raw():
     champion_list = {}

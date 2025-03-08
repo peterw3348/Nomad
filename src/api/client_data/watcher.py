@@ -16,7 +16,7 @@ MAX_RETRIES = 3
 WAIT_INTERVAL = 10  # Time between status checks
 POLL_INTERVAL = 1   # Time between lobby fetch attempts
 MAX_FAILS_BEFORE_EXIT = 10  # Stop retrying after too many failures
-WR_PATH = paths.DATA_DIR / "static" / "dd_wr.csv"
+WR_PATH = paths.STATIC_DIR / "dd_wr.csv"
 
 # Store last fetched data to prevent redundant reprints
 previous_lobby_data = None  
