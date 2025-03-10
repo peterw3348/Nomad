@@ -79,47 +79,55 @@ def convert_grouped_to_champs(grouped, verbose=False):
 
 def compute_composition_gain(grouped_champs, verbose=False):
     base_composition = {cat: 0 for cat in ["Damage", "Toughness", "Control", "Mobility", "Utility"]}
-    
+
+    # Compute base composition only using the 4 other teammates
     for champ in grouped_champs["team"]:
         if champ.cid != grouped_champs["player"][0].cid:
             for category in base_composition:
                 base_composition[category] += champ.ratings.get(category, 0)
-    
+
     player_champ = grouped_champs["player"][0]
+
+    # Compute player's contribution to composition
     player_gain = sum(
-        diminishing_returns(base_composition[cat] + apply_role_weights(player_champ, cat)) -
+        diminishing_returns(base_composition[cat] + apply_role_weights(player_champ, cat)) - 
         diminishing_returns(base_composition[cat])
         for cat in base_composition
     )
-    
+
+    # Compute composition gain for bench champs
     gains = []
     for champ in grouped_champs["bench"]:
         comp_gain = sum(
-            diminishing_returns(base_composition[cat] + apply_role_weights(champ, cat)) -
+            diminishing_returns(base_composition[cat] + apply_role_weights(champ, cat)) - 
             diminishing_returns(base_composition[cat])
             for cat in base_composition
         )
-        champ.raw_gain = round(comp_gain, 2)
+        champ.raw_gain = comp_gain  # Keep full precision
         gains.append(comp_gain)
-    
-    mean_gain = np.mean(gains) if gains else 0
-    std_dev_gain = np.std(gains) if gains else 1
-    
+
+    # Ensure consistency in mean and std deviation calculations
+    all_gains = gains + [player_gain]  # Include player gain in dataset
+    mean_gain = np.mean(all_gains) if all_gains else 0
+    std_dev_gain = max(np.std(all_gains), 1e-6)  # Ensure std_dev is never too small
+
     if verbose:
-        print(f"Composition Gain Normalization -> Mean: {mean_gain:.2f}, Std Dev: {std_dev_gain:.2f}")
-    
+        print(f"Composition Gain Normalization -> Mean: {mean_gain:.4f}, Std Dev: {std_dev_gain:.4f}")
+
+    # Normalize gains using the consistent mean/std values
     for champ in grouped_champs["bench"]:
         champ.norm_gain = round(((champ.raw_gain - mean_gain) / std_dev_gain) * 50, 2) if std_dev_gain > 0 else 0
-    
-    player_champ.raw_gain = round(player_gain, 2)
+
+    player_champ.raw_gain = player_gain  # Maintain precision
     player_champ.norm_gain = round(((player_gain - mean_gain) / std_dev_gain) * 50, 2) if std_dev_gain > 0 else 0
-    
+
+    # Score calculation remains the same
     for champ in grouped_champs["bench"]:
         champ.score = round((champ.norm_gain * 0.7) + (champ.norm_wr * 0.3), 2)
     player_champ.score = round((player_champ.norm_gain * 0.7) + (player_champ.norm_wr * 0.3), 2)
-    
+
     grouped_champs["bench"].sort(key=lambda c: c.score, reverse=True)
-    
+
     return grouped_champs
 
 def evaluator(grouped, verbose=False):
@@ -127,17 +135,7 @@ def evaluator(grouped, verbose=False):
     result = compute_composition_gain(grouped_champs, verbose)
     
     if verbose:
-        msg = {
-            "bench": [
-                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr, "score": c.score} 
-                for c in result["bench"]
-            ],
-            "player": [
-                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr, "score": c.score} 
-                for c in result["player"]
-            ]
-        }
-        print(json.dumps(msg, indent=4, default=lambda o: o.__dict__))
+        print(json.dumps(result, indent=4, default=lambda o: o.__dict__))
     return result
 
 if __name__ == "__main__":
@@ -147,6 +145,12 @@ if __name__ == "__main__":
         "player": [498]
     }
     result = evaluator(test_grouped, verbose=True)
+    test_grouped_2 = {
+        "team": [136, 64, 54, 875, 893],
+        "bench": [203, 517, 86, 245, 141, 498],
+        "player": [893]
+    }
+    result = evaluator(test_grouped_2, verbose=True)
 
 # NOTE: norm_gain and norm_wr is now uncapped and fully based on Z-score scaling
 # The following applies more to norm_gain, as raw_wr is naturally bounded by 0-100
