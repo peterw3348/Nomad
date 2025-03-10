@@ -1,3 +1,11 @@
+# evaluator.py - ARAM Champion Evaluation and Scoring
+# Version: v0.1
+# This script processes League of Legends ARAM champion select data,
+# evaluates champion picks based on role weights and win rates,
+# and computes optimal team compositions.
+
+version = "v0.1"
+
 import json
 import numpy as np
 from src.utils import paths
