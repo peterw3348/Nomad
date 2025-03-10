@@ -28,8 +28,7 @@ def apply_role_weights(champ, category):
     secondary_weight = role_weights.get(champ.secondary, {}).get(category, 1.0)
     return champ.ratings.get(category, 0) * max(primary_weight, secondary_weight)
 
-def fetch_win_rates():
-    """Loads raw WR from file and calculates normalized WR using mean and standard deviation from the dataset."""
+def fetch_win_rates(verbose=False):
     win_rates = {}
     raw_wr_values = []
     
@@ -47,16 +46,18 @@ def fetch_win_rates():
     mean_wr = np.mean(raw_wr_values) if raw_wr_values else 50
     std_dev_wr = np.std(raw_wr_values) if raw_wr_values else 25
     
+    if verbose:
+        print(f"Win Rate Normalization -> Mean: {mean_wr:.2f}, Std Dev: {std_dev_wr:.2f}")
+    
     for champ_id, raw_wr in win_rates.items():
-        norm_wr = np.clip(((raw_wr - mean_wr) / std_dev_wr) * 50, -50, 50) if std_dev_wr > 0 else 0
-        win_rates[champ_id] = (raw_wr, round(norm_wr, 2))
+        norm_wr = round(((raw_wr - mean_wr) / std_dev_wr) * 50, 2) if std_dev_wr > 0 else 0
+        win_rates[champ_id] = (raw_wr, norm_wr)
     
     return win_rates
 
-def convert_grouped_to_champs(grouped):
-    """ Converts champion IDs in grouped dict into Champ objects """
+def convert_grouped_to_champs(grouped, verbose=False):
     champions = Champ.load_champs()
-    win_rates = fetch_win_rates()
+    win_rates = fetch_win_rates(verbose)
     
     for champ in champions.values():
         if str(champ.cid) in win_rates:
@@ -68,8 +69,7 @@ def convert_grouped_to_champs(grouped):
         "player": [champions[str(grouped["player"][0])]] if str(grouped["player"][0]) in champions else []
     }
 
-def compute_composition_gain(grouped_champs):
-    """ Computes composition gain given a dict with Champ objects """
+def compute_composition_gain(grouped_champs, verbose=False):
     base_composition = {cat: 0 for cat in ["Damage", "Toughness", "Control", "Mobility", "Utility"]}
     
     for champ in grouped_champs["team"]:
@@ -97,32 +97,39 @@ def compute_composition_gain(grouped_champs):
     mean_gain = np.mean(gains) if gains else 0
     std_dev_gain = np.std(gains) if gains else 1
     
+    if verbose:
+        print(f"Composition Gain Normalization -> Mean: {mean_gain:.2f}, Std Dev: {std_dev_gain:.2f}")
+    
     for champ in grouped_champs["bench"]:
-        champ.norm_gain = np.clip(round(((champ.raw_gain - mean_gain) / std_dev_gain) * 50, 2), -50, 50) if std_dev_gain > 0 else 0
+        champ.norm_gain = round(((champ.raw_gain - mean_gain) / std_dev_gain) * 50, 2) if std_dev_gain > 0 else 0
     
     player_champ.raw_gain = round(player_gain, 2)
-    player_champ.norm_gain = np.clip(round(((player_gain - mean_gain) / std_dev_gain) * 50, 2), -50, 50) if std_dev_gain > 0 else 0
+    player_champ.norm_gain = round(((player_gain - mean_gain) / std_dev_gain) * 50, 2) if std_dev_gain > 0 else 0
     
-    grouped_champs["bench"].sort(key=lambda c: c.norm_gain, reverse=True)
+    for champ in grouped_champs["bench"]:
+        champ.score = round((champ.norm_gain * 0.7) + (champ.norm_wr * 0.3), 2)
+    player_champ.score = round((player_champ.norm_gain * 0.7) + (player_champ.norm_wr * 0.3), 2)
+    
+    grouped_champs["bench"].sort(key=lambda c: c.score, reverse=True)
     
     return grouped_champs
 
-def evaluator(grouped, verbose=True):
-    """ Converts champion IDs into Champ objects, computes composition gain, and returns the result """
-    grouped_champs = convert_grouped_to_champs(grouped)
-    result = compute_composition_gain(grouped_champs)
+def evaluator(grouped, verbose=False):
+    grouped_champs = convert_grouped_to_champs(grouped, verbose)
+    result = compute_composition_gain(grouped_champs, verbose)
     
-    if not verbose:
-        return {
+    if verbose:
+        msg = {
             "bench": [
-                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr} 
+                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr, "score": c.score} 
                 for c in result["bench"]
             ],
             "player": [
-                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr} 
+                {"name": c.name, "key": c.cid, "ratings": c.ratings, "raw_gain": c.raw_gain, "raw_wr": c.raw_wr, "norm_gain": c.norm_gain, "norm_wr": c.norm_wr, "score": c.score} 
                 for c in result["player"]
             ]
         }
+        print(json.dumps(msg, indent=4, default=lambda o: o.__dict__))
     return result
 
 if __name__ == "__main__":
@@ -131,5 +138,17 @@ if __name__ == "__main__":
         "bench": [203, 517, 86, 245, 141, 893],
         "player": [498]
     }
-    result = evaluator(test_grouped, verbose=False)
-    print(json.dumps(result, indent=4, default=lambda o: o.__dict__))
+    result = evaluator(test_grouped, verbose=True)
+
+# NOTE: norm_gain and norm_wr is now uncapped and fully based on Z-score scaling
+# The following applies more to norm_gain, as raw_wr is naturally bounded by 0-100
+# Previously, it was clipped to [-50, 50], but this artificially limited extreme values
+# Now, high-performing champions can exceed 50, and low-performing ones can drop below -50
+# 
+# If issues arise:
+# - Check if norm_gain values are excessively large (e.g., >150 or <-150)
+# - Consider applying a soft normalization (e.g., log scaling) if outliers dominate results
+# - Print min/max norm_gain values to debug extreme cases
+# - Ensure the standard deviation isn't too small, which could cause extreme inflation
+#
+# Revisit this if score balancing feels off or if top picks seem too dominant
