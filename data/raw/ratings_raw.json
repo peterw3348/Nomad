@@ -1,5 +1,5 @@
 {
-    "266": {
+    "Aatrox": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -13,10 +13,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Aatrox"
+        "Difficulty": 2
     },
-    "103": {
+    "Ahri": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -30,10 +29,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Ahri"
+        "Difficulty": 2
     },
-    "84": {
+    "Akali": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -47,10 +45,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Akali"
+        "Difficulty": 2
     },
-    "166": {
+    "Akshan": {
         "Primary": "Marksman",
         "Secondary": "Assassin",
         "Ratings": {
@@ -64,10 +61,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Akshan"
+        "Difficulty": 3
     },
-    "12": {
+    "Alistar": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -81,10 +77,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Alistar"
+        "Difficulty": 1
     },
-    "32": {
+    "Amumu": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -98,10 +93,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Amumu"
+        "Difficulty": 1
     },
-    "34": {
+    "Anivia": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -115,10 +109,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Anivia"
+        "Difficulty": 3
     },
-    "1": {
+    "Annie": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -132,10 +125,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Annie"
+        "Difficulty": 1
     },
-    "523": {
+    "Aphelios": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -149,10 +141,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Aphelios"
+        "Difficulty": 3
     },
-    "22": {
+    "Ashe": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -166,10 +157,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Ashe"
+        "Difficulty": 1
     },
-    "136": {
+    "Aurelion Sol": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -183,10 +173,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "AurelionSol"
+        "Difficulty": 3
     },
-    "893": {
+    "Aurora": {
         "Primary": "Mage",
         "Secondary": "Assassin",
         "Ratings": {
@@ -200,10 +189,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Aurora"
+        "Difficulty": 2
     },
-    "268": {
+    "Azir": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -217,10 +205,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Azir"
+        "Difficulty": 3
     },
-    "432": {
+    "Bard": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -234,10 +221,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Bard"
+        "Difficulty": 3
     },
-    "200": {
+    "Bel'Veth": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -251,10 +237,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Belveth"
+        "Difficulty": 2
     },
-    "53": {
+    "Blitzcrank": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -268,10 +253,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Blitzcrank"
+        "Difficulty": 1
     },
-    "63": {
+    "Brand": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -285,10 +269,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Brand"
+        "Difficulty": 2
     },
-    "201": {
+    "Braum": {
         "Primary": "Warden",
         "Secondary": "N/A",
         "Ratings": {
@@ -302,10 +285,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Braum"
+        "Difficulty": 2
     },
-    "233": {
+    "Briar": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -319,10 +301,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Briar"
+        "Difficulty": 2
     },
-    "51": {
+    "Caitlyn": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -336,10 +317,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Caitlyn"
+        "Difficulty": 1
     },
-    "164": {
+    "Camille": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -353,10 +333,9 @@
         "Style": 40,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Camille"
+        "Difficulty": 3
     },
-    "69": {
+    "Cassiopeia": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -370,10 +349,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Cassiopeia"
+        "Difficulty": 3
     },
-    "31": {
+    "Cho'Gath": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -387,10 +365,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Chogath"
+        "Difficulty": 1
     },
-    "42": {
+    "Corki": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -404,10 +381,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Corki"
+        "Difficulty": 2
     },
-    "122": {
+    "Darius": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -421,10 +397,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Darius"
+        "Difficulty": 2
     },
-    "131": {
+    "Diana": {
         "Primary": "Assassin",
         "Secondary": "Diver",
         "Ratings": {
@@ -438,10 +413,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Diana"
+        "Difficulty": 1
     },
-    "36": {
+    "Dr. Mundo": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -455,10 +429,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "DrMundo"
+        "Difficulty": 1
     },
-    "119": {
+    "Draven": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -472,10 +445,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Draven"
+        "Difficulty": 2
     },
-    "245": {
+    "Ekko": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -489,10 +461,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Ekko"
+        "Difficulty": 3
     },
-    "60": {
+    "Elise": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -506,10 +477,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Elise"
+        "Difficulty": 2
     },
-    "28": {
+    "Evelynn": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -523,10 +493,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Evelynn"
+        "Difficulty": 2
     },
-    "81": {
+    "Ezreal": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -540,10 +509,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Ezreal"
+        "Difficulty": 1
     },
-    "9": {
+    "Fiddlesticks": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -557,10 +525,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Fiddlesticks"
+        "Difficulty": 2
     },
-    "114": {
+    "Fiora": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -574,10 +541,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Fiora"
+        "Difficulty": 2
     },
-    "105": {
+    "Fizz": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -591,10 +557,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Fizz"
+        "Difficulty": 2
     },
-    "3": {
+    "Galio": {
         "Primary": "Warden",
         "Secondary": "N/A",
         "Ratings": {
@@ -608,10 +573,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Galio"
+        "Difficulty": 2
     },
-    "41": {
+    "Gangplank": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -625,10 +589,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Gangplank"
+        "Difficulty": 3
     },
-    "86": {
+    "Garen": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -642,10 +605,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Garen"
+        "Difficulty": 1
     },
-    "150": {
+    "Gnar": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -659,10 +621,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Gnar"
+        "Difficulty": 3
     },
-    "79": {
+    "Gragas": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -676,10 +637,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Gragas"
+        "Difficulty": 2
     },
-    "104": {
+    "Graves": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -693,10 +653,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Graves"
+        "Difficulty": 2
     },
-    "887": {
+    "Gwen": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -710,10 +669,9 @@
         "Style": 50,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Gwen"
+        "Difficulty": 2
     },
-    "120": {
+    "Hecarim": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -727,10 +685,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Hecarim"
+        "Difficulty": 2
     },
-    "74": {
+    "Heimerdinger": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -744,10 +701,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Heimerdinger"
+        "Difficulty": 2
     },
-    "910": {
+    "Hwei": {
         "Primary": "Artillery",
         "Secondary": "N/A",
         "Ratings": {
@@ -761,10 +717,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Hwei"
+        "Difficulty": 3
     },
-    "420": {
+    "Illaoi": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -778,10 +733,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Illaoi"
+        "Difficulty": 2
     },
-    "39": {
+    "Irelia": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -795,10 +749,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Irelia"
+        "Difficulty": 2
     },
-    "427": {
+    "Ivern": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -812,10 +765,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Ivern"
+        "Difficulty": 3
     },
-    "40": {
+    "Janna": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -829,10 +781,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Janna"
+        "Difficulty": 1
     },
-    "59": {
+    "Jarvan IV": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -846,10 +797,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "JarvanIV"
+        "Difficulty": 1
     },
-    "24": {
+    "Jax": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -863,10 +813,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Jax"
+        "Difficulty": 1
     },
-    "126": {
+    "Jayce": {
         "Primary": "Artillery",
         "Secondary": "N/A",
         "Ratings": {
@@ -880,10 +829,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Jayce"
+        "Difficulty": 2
     },
-    "202": {
+    "Jhin": {
         "Primary": "Marksman",
         "Secondary": "Catcher",
         "Ratings": {
@@ -897,10 +845,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Jhin"
+        "Difficulty": 2
     },
-    "222": {
+    "Jinx": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -914,10 +861,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Jinx"
+        "Difficulty": 2
     },
-    "897": {
+    "K'Sante": {
         "Primary": "Warden",
         "Secondary": "Skirmisher",
         "Ratings": {
@@ -931,10 +877,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "KSante"
+        "Difficulty": 3
     },
-    "145": {
+    "Kai'Sa": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -948,10 +893,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Kaisa"
+        "Difficulty": 2
     },
-    "429": {
+    "Kalista": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -965,10 +909,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Kalista"
+        "Difficulty": 3
     },
-    "43": {
+    "Karma": {
         "Primary": "Burst",
         "Secondary": "Enchanter",
         "Ratings": {
@@ -982,10 +925,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Karma"
+        "Difficulty": 1
     },
-    "30": {
+    "Karthus": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -999,10 +941,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Karthus"
+        "Difficulty": 2
     },
-    "38": {
+    "Kassadin": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1016,10 +957,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Kassadin"
+        "Difficulty": 2
     },
-    "55": {
+    "Katarina": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1033,10 +973,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Katarina"
+        "Difficulty": 2
     },
-    "10": {
+    "Kayle": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -1050,10 +989,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Kayle"
+        "Difficulty": 2
     },
-    "141": {
+    "Kayn": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1067,10 +1005,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Kayn"
+        "Difficulty": 2
     },
-    "85": {
+    "Kennen": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -1084,10 +1021,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Kennen"
+        "Difficulty": 2
     },
-    "121": {
+    "Kha'Zix": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1101,10 +1037,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Khazix"
+        "Difficulty": 2
     },
-    "203": {
+    "Kindred": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -1118,10 +1053,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Kindred"
+        "Difficulty": 3
     },
-    "240": {
+    "Kled": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1135,10 +1069,25 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Kled"
+        "Difficulty": 2
     },
-    "96": {
+    "Kled & Skaarl": {
+        "Primary": "Skirmisher",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 3,
+            "Toughness": 2,
+            "Control": 1,
+            "Mobility": 3,
+            "Utility": 1
+        },
+        "Basic Attacks": "active",
+        "Style": 30,
+        "Abilities": "inactive",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Kog'Maw": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -1152,10 +1101,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "KogMaw"
+        "Difficulty": 2
     },
-    "7": {
+    "LeBlanc": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -1169,10 +1117,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Leblanc"
+        "Difficulty": 2
     },
-    "64": {
+    "Lee Sin": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -1186,10 +1133,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "LeeSin"
+        "Difficulty": 2
     },
-    "89": {
+    "Leona": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1203,10 +1149,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Leona"
+        "Difficulty": 1
     },
-    "876": {
+    "Lillia": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1220,10 +1165,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Lillia"
+        "Difficulty": 3
     },
-    "127": {
+    "Lissandra": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -1237,10 +1181,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Lissandra"
+        "Difficulty": 2
     },
-    "236": {
+    "Lucian": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -1254,10 +1197,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Lucian"
+        "Difficulty": 2
     },
-    "117": {
+    "Lulu": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -1271,10 +1213,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Lulu"
+        "Difficulty": 2
     },
-    "99": {
+    "Lux": {
         "Primary": "Burst",
         "Secondary": "Artillery",
         "Ratings": {
@@ -1288,10 +1229,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Lux"
+        "Difficulty": 1
     },
-    "54": {
+    "Malphite": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1305,10 +1245,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Malphite"
+        "Difficulty": 1
     },
-    "90": {
+    "Malzahar": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -1322,10 +1261,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Malzahar"
+        "Difficulty": 1
     },
-    "57": {
+    "Maokai": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1339,10 +1277,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Maokai"
+        "Difficulty": 1
     },
-    "11": {
+    "Master Yi": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1356,10 +1293,25 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "MasterYi"
+        "Difficulty": 1
     },
-    "902": {
+    "Mega Gnar": {
+        "Primary": "Vanguard",
+        "Secondary": "N/A",
+        "Ratings": {
+            "Damage": 2,
+            "Toughness": 3,
+            "Control": 2,
+            "Mobility": 1,
+            "Utility": 1
+        },
+        "Basic Attacks": "inactive",
+        "Style": 65,
+        "Abilities": "active",
+        "Damage Type": "Physical",
+        "Difficulty": 2
+    },
+    "Milio": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -1373,10 +1325,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Milio"
+        "Difficulty": 1
     },
-    "21": {
+    "Miss Fortune": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -1390,10 +1341,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "MissFortune"
+        "Difficulty": 1
     },
-    "82": {
+    "Mordekaiser": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -1407,10 +1357,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Mordekaiser"
+        "Difficulty": 2
     },
-    "25": {
+    "Morgana": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1424,10 +1373,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Morgana"
+        "Difficulty": 1
     },
-    "950": {
+    "Naafiri": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1441,10 +1389,9 @@
         "Style": 70,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Naafiri"
+        "Difficulty": 1
     },
-    "267": {
+    "Nami": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -1458,10 +1405,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Nami"
+        "Difficulty": 2
     },
-    "75": {
+    "Nasus": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -1475,10 +1421,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Nasus"
+        "Difficulty": 1
     },
-    "111": {
+    "Nautilus": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1492,10 +1437,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Nautilus"
+        "Difficulty": 2
     },
-    "518": {
+    "Neeko": {
         "Primary": "Burst",
         "Secondary": "Catcher",
         "Ratings": {
@@ -1509,10 +1453,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Neeko"
+        "Difficulty": 1
     },
-    "76": {
+    "Nidalee": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -1526,10 +1469,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Nidalee"
+        "Difficulty": 2
     },
-    "895": {
+    "Nilah": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1543,10 +1485,9 @@
         "Style": 25,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Nilah"
+        "Difficulty": 3
     },
-    "56": {
+    "Nocturne": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1560,10 +1501,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Nocturne"
+        "Difficulty": 1
     },
-    "20": {
+    "Nunu & Willump": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1577,10 +1517,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Nunu"
+        "Difficulty": 1
     },
-    "2": {
+    "Olaf": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -1594,10 +1533,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Olaf"
+        "Difficulty": 1
     },
-    "61": {
+    "Orianna": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -1611,10 +1549,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Orianna"
+        "Difficulty": 2
     },
-    "516": {
+    "Ornn": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1628,10 +1565,9 @@
         "Style": 60,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Ornn"
+        "Difficulty": 2
     },
-    "80": {
+    "Pantheon": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -1645,10 +1581,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Pantheon"
+        "Difficulty": 1
     },
-    "78": {
+    "Poppy": {
         "Primary": "Warden",
         "Secondary": "N/A",
         "Ratings": {
@@ -1662,10 +1597,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Poppy"
+        "Difficulty": 2
     },
-    "555": {
+    "Pyke": {
         "Primary": "Assassin",
         "Secondary": "Catcher",
         "Ratings": {
@@ -1679,10 +1613,9 @@
         "Style": 50,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Pyke"
+        "Difficulty": 2
     },
-    "246": {
+    "Qiyana": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1696,10 +1629,9 @@
         "Style": 70,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Qiyana"
+        "Difficulty": 3
     },
-    "133": {
+    "Quinn": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -1713,10 +1645,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Quinn"
+        "Difficulty": 2
     },
-    "497": {
+    "Rakan": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1730,10 +1661,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Rakan"
+        "Difficulty": 2
     },
-    "33": {
+    "Rammus": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1747,10 +1677,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Rammus"
+        "Difficulty": 1
     },
-    "421": {
+    "Rek'Sai": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -1764,10 +1693,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "RekSai"
+        "Difficulty": 2
     },
-    "526": {
+    "Rell": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1781,10 +1709,9 @@
         "Style": 85,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Rell"
+        "Difficulty": 2
     },
-    "888": {
+    "Renata Glasc": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -1798,10 +1725,9 @@
         "Style": 80,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Renata"
+        "Difficulty": 2
     },
-    "58": {
+    "Renekton": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -1815,10 +1741,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Renekton"
+        "Difficulty": 1
     },
-    "107": {
+    "Rengar": {
         "Primary": "Assassin",
         "Secondary": "Diver",
         "Ratings": {
@@ -1832,10 +1757,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Rengar"
+        "Difficulty": 2
     },
-    "92": {
+    "Riven": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -1849,10 +1773,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Riven"
+        "Difficulty": 2
     },
-    "68": {
+    "Rumble": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -1866,10 +1789,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Rumble"
+        "Difficulty": 2
     },
-    "13": {
+    "Ryze": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -1883,10 +1805,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Ryze"
+        "Difficulty": 2
     },
-    "360": {
+    "Samira": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -1900,10 +1821,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Samira"
+        "Difficulty": 2
     },
-    "113": {
+    "Sejuani": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -1917,10 +1837,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Sejuani"
+        "Difficulty": 2
     },
-    "235": {
+    "Senna": {
         "Primary": "Marksman",
         "Secondary": "Enchanter",
         "Ratings": {
@@ -1934,10 +1853,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Senna"
+        "Difficulty": 2
     },
-    "147": {
+    "Seraphine": {
         "Primary": "Burst",
         "Secondary": "Enchanter",
         "Ratings": {
@@ -1951,10 +1869,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Seraphine"
+        "Difficulty": 1
     },
-    "875": {
+    "Sett": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -1968,10 +1885,9 @@
         "Style": 40,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Sett"
+        "Difficulty": 2
     },
-    "35": {
+    "Shaco": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -1985,10 +1901,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Shaco"
+        "Difficulty": 2
     },
-    "98": {
+    "Shen": {
         "Primary": "Warden",
         "Secondary": "N/A",
         "Ratings": {
@@ -2002,10 +1917,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Shen"
+        "Difficulty": 2
     },
-    "102": {
+    "Shyvana": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2019,10 +1933,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Shyvana"
+        "Difficulty": 1
     },
-    "27": {
+    "Singed": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -2036,10 +1949,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Singed"
+        "Difficulty": 2
     },
-    "14": {
+    "Sion": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -2053,10 +1965,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Sion"
+        "Difficulty": 1
     },
-    "15": {
+    "Sivir": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2070,10 +1981,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Sivir"
+        "Difficulty": 2
     },
-    "72": {
+    "Skarner": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -2087,10 +1997,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Skarner"
+        "Difficulty": 2
     },
-    "901": {
+    "Smolder": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2104,10 +2013,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Smolder"
+        "Difficulty": 2
     },
-    "37": {
+    "Sona": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -2121,10 +2029,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Sona"
+        "Difficulty": 1
     },
-    "16": {
+    "Soraka": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -2138,10 +2045,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Soraka"
+        "Difficulty": 1
     },
-    "50": {
+    "Swain": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -2155,10 +2061,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Swain"
+        "Difficulty": 2
     },
-    "517": {
+    "Sylas": {
         "Primary": "Burst",
         "Secondary": "Skirmisher",
         "Ratings": {
@@ -2172,10 +2077,9 @@
         "Style": 70,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Sylas"
+        "Difficulty": 3
     },
-    "134": {
+    "Syndra": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -2189,10 +2093,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Syndra"
+        "Difficulty": 2
     },
-    "223": {
+    "Tahm Kench": {
         "Primary": "Warden",
         "Secondary": "N/A",
         "Ratings": {
@@ -2206,10 +2109,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "TahmKench"
+        "Difficulty": 1
     },
-    "163": {
+    "Taliyah": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -2223,10 +2125,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Taliyah"
+        "Difficulty": 2
     },
-    "91": {
+    "Talon": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -2240,10 +2141,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Talon"
+        "Difficulty": 2
     },
-    "44": {
+    "Taric": {
         "Primary": "Enchanter",
         "Secondary": "Warden",
         "Ratings": {
@@ -2257,10 +2157,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Taric"
+        "Difficulty": 2
     },
-    "17": {
+    "Teemo": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -2274,10 +2173,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Teemo"
+        "Difficulty": 1
     },
-    "412": {
+    "Thresh": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -2291,10 +2189,9 @@
         "Style": 75,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Thresh"
+        "Difficulty": 3
     },
-    "18": {
+    "Tristana": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2308,10 +2205,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Tristana"
+        "Difficulty": 1
     },
-    "48": {
+    "Trundle": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2325,10 +2221,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Trundle"
+        "Difficulty": 1
     },
-    "23": {
+    "Tryndamere": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -2342,10 +2237,9 @@
         "Style": 10,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Tryndamere"
+        "Difficulty": 1
     },
-    "4": {
+    "Twisted Fate": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -2359,10 +2253,9 @@
         "Style": 65,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "TwistedFate"
+        "Difficulty": 2
     },
-    "29": {
+    "Twitch": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2376,10 +2269,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Twitch"
+        "Difficulty": 2
     },
-    "77": {
+    "Udyr": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2393,10 +2285,9 @@
         "Style": 35,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Udyr"
+        "Difficulty": 1
     },
-    "6": {
+    "Urgot": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2410,10 +2301,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Urgot"
+        "Difficulty": 2
     },
-    "110": {
+    "Varus": {
         "Primary": "Marksman",
         "Secondary": "Artillery",
         "Ratings": {
@@ -2427,10 +2317,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Varus"
+        "Difficulty": 2
     },
-    "67": {
+    "Vayne": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2444,10 +2333,9 @@
         "Style": 0,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Vayne"
+        "Difficulty": 2
     },
-    "45": {
+    "Veigar": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -2461,10 +2349,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Veigar"
+        "Difficulty": 2
     },
-    "161": {
+    "Vel'Koz": {
         "Primary": "Artillery",
         "Secondary": "N/A",
         "Ratings": {
@@ -2478,10 +2365,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Velkoz"
+        "Difficulty": 2
     },
-    "711": {
+    "Vex": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -2495,10 +2381,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Vex"
+        "Difficulty": 2
     },
-    "254": {
+    "Vi": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -2512,10 +2397,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Vi"
+        "Difficulty": 1
     },
-    "234": {
+    "Viego": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -2529,10 +2413,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Viego"
+        "Difficulty": 3
     },
-    "112": {
+    "Viktor": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -2546,10 +2429,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Viktor"
+        "Difficulty": 3
     },
-    "8": {
+    "Vladimir": {
         "Primary": "Battlemage",
         "Secondary": "N/A",
         "Ratings": {
@@ -2563,10 +2445,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Vladimir"
+        "Difficulty": 2
     },
-    "106": {
+    "Volibear": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2580,10 +2461,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Volibear"
+        "Difficulty": 1
     },
-    "19": {
+    "Warwick": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -2597,10 +2477,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "Warwick"
+        "Difficulty": 1
     },
-    "62": {
+    "Wukong": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -2614,10 +2493,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "MonkeyKing"
+        "Difficulty": 1
     },
-    "498": {
+    "Xayah": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2631,10 +2509,9 @@
         "Style": 30,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Xayah"
+        "Difficulty": 2
     },
-    "101": {
+    "Xerath": {
         "Primary": "Artillery",
         "Secondary": "N/A",
         "Ratings": {
@@ -2648,10 +2525,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Xerath"
+        "Difficulty": 2
     },
-    "5": {
+    "Xin Zhao": {
         "Primary": "Diver",
         "Secondary": "N/A",
         "Ratings": {
@@ -2665,10 +2541,9 @@
         "Style": 35,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 1,
-        "name": "XinZhao"
+        "Difficulty": 1
     },
-    "157": {
+    "Yasuo": {
         "Primary": "Skirmisher",
         "Secondary": "N/A",
         "Ratings": {
@@ -2682,10 +2557,9 @@
         "Style": 20,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Yasuo"
+        "Difficulty": 3
     },
-    "777": {
+    "Yone": {
         "Primary": "Assassin",
         "Secondary": "Skirmisher",
         "Ratings": {
@@ -2699,10 +2573,9 @@
         "Style": 45,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Yone"
+        "Difficulty": 3
     },
-    "83": {
+    "Yorick": {
         "Primary": "Juggernaut",
         "Secondary": "N/A",
         "Ratings": {
@@ -2716,10 +2589,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Yorick"
+        "Difficulty": 2
     },
-    "350": {
+    "Yuumi": {
         "Primary": "Enchanter",
         "Secondary": "N/A",
         "Ratings": {
@@ -2733,10 +2605,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Yuumi"
+        "Difficulty": 1
     },
-    "154": {
+    "Zac": {
         "Primary": "Vanguard",
         "Secondary": "N/A",
         "Ratings": {
@@ -2750,10 +2621,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 1,
-        "name": "Zac"
+        "Difficulty": 1
     },
-    "238": {
+    "Zed": {
         "Primary": "Assassin",
         "Secondary": "N/A",
         "Ratings": {
@@ -2767,10 +2637,9 @@
         "Style": 55,
         "Abilities": "active",
         "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Zed"
+        "Difficulty": 3
     },
-    "221": {
+    "Zeri": {
         "Primary": "Marksman",
         "Secondary": "N/A",
         "Ratings": {
@@ -2784,10 +2653,9 @@
         "Style": 35,
         "Abilities": "inactive",
         "Damage Type": "Physical",
-        "Difficulty": 2,
-        "name": "Zeri"
+        "Difficulty": 2
     },
-    "115": {
+    "Ziggs": {
         "Primary": "Artillery",
         "Secondary": "N/A",
         "Ratings": {
@@ -2801,10 +2669,9 @@
         "Style": 90,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Ziggs"
+        "Difficulty": 2
     },
-    "26": {
+    "Zilean": {
         "Primary": "Specialist",
         "Secondary": "N/A",
         "Ratings": {
@@ -2818,10 +2685,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Zilean"
+        "Difficulty": 2
     },
-    "142": {
+    "Zoe": {
         "Primary": "Burst",
         "Secondary": "N/A",
         "Ratings": {
@@ -2835,10 +2701,9 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 3,
-        "name": "Zoe"
+        "Difficulty": 3
     },
-    "143": {
+    "Zyra": {
         "Primary": "Catcher",
         "Secondary": "N/A",
         "Ratings": {
@@ -2852,41 +2717,6 @@
         "Style": 100,
         "Abilities": "active",
         "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Zyra"
-    },
-    "800": {
-        "Primary": "Artillery",
-        "Secondary": "N/A",
-        "Ratings": {
-            "Damage": 3,
-            "Toughness": 1,
-            "Control": 2,
-            "Mobility": 1,
-            "Utility": 1
-        },
-        "Basic Attacks": "inactive",
-        "Style": 100,
-        "Abilities": "active",
-        "Damage Type": "Magic",
-        "Difficulty": 2,
-        "name": "Mel"
-    },
-    "799": {
-        "Primary": "Diver",
-        "Secondary": "Skirmisher",
-        "Ratings": {
-            "Damage": 3,
-            "Toughness": 2,
-            "Control": 1,
-            "Mobility": 3,
-            "Utility": 1
-        },
-        "Basic Attacks": "inactive",
-        "Style": 55,
-        "Abilities": "active",
-        "Damage Type": "Physical",
-        "Difficulty": 3,
-        "name": "Ambessa"
+        "Difficulty": 2
     }
 }

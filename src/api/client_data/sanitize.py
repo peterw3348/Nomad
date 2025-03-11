@@ -33,8 +33,8 @@ def sanitize_champion_data(data, player_puuid):
     return grouped
 
 if __name__ == "__main__":
-    input_file = paths.BASE_DIR / "test" / "lobby" / "lobby.json"
-    output_file = paths.BASE_DIR / "test" / "lobby" / "lobby_clean.json"
+    input_file = paths.TEST_DIR / "lobby" / "lobby.json"
+    output_file = paths.TEST_DIR / "lobby" / "lobby_clean.json"
 
     if not input_file.exists():
         print(f"Error: {input_file} not found.")
