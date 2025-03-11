@@ -2,7 +2,7 @@ import json
 
 from src.utils import paths
 
-DATA_PATH = paths.STATIC_DIR / "champion_ratings.json"
+DATA_PATH = paths.ASSETS_DIR / "champion_ratings.json"
 
 class Champ:
     _champs = None  # Cached

@@ -20,7 +20,7 @@ def get_champion_names():
 
 if __name__ == "__main__":
     champions = get_champion_names()
-    file_path = os.path.join(paths.STATIC_DIR, "champions.json")
+    file_path = os.path.join(paths.ASSETS_DIR, "champions.json")
     with open(file_path, "w") as f:
         json.dump(champions, f, indent=4)
     print("Champion data saved to data/static/champions.json")

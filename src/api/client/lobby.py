@@ -2,7 +2,7 @@ import requests
 import json
 import sys
 
-from src.api.client_data.sanitize import sanitize_champion_data
+from src.api.client.sanitize import sanitize_champion_data
 
 def fetch_lobby_champions(port, password):
     """

@@ -56,7 +56,7 @@ def process_url_to_key(url):
 if __name__ == "__main__":
     url = "https://www.friendsofdirtydoughnuthighmmraramwinrate.com/"
     champion_data = scrape_champion_cells(url)
-    path = paths.STATIC_DIR / "dd_wr.csv"
+    path = paths.ASSETS_DIR / "dd_wr.csv"
     if champion_data is not None:
         print(champion_data.head())  # Show first few rows
         champion_data.to_csv(path, index=False)

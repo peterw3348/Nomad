@@ -12,11 +12,11 @@ from datetime import datetime
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-from src.api.client_data.acquire import get_credentials
-from src.api.client_data.lobby import fetch_lobby_champions
-from src.api.client_data.sanitize import sanitize_champion_data
-from src.api.client_data.status import Status, get_status
-from src.api.client_data.evaluator import evaluator
+from src.api.client.acquire import get_credentials
+from src.api.client.lobby import fetch_lobby_champions
+from src.api.client.sanitize import sanitize_champion_data
+from src.api.client.status import Status, get_status
+from src.core.evaluator import evaluator
 from src.utils import paths
 
 MAX_RETRIES = 3

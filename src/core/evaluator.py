@@ -9,10 +9,10 @@ version = "v0.1"
 import json
 import numpy as np
 from src.utils import paths
-from src.api.client_data.champion import Champ
+from src.api.client.champion import Champ
 
-weights = paths.STATIC_DIR / "classes" / "role_weights.json"
-wr = paths.STATIC_DIR / "dd_wr.csv"
+weights = paths.ASSETS_DIR / "classes" / "role_weights.json"
+wr = paths.ASSETS_DIR / "dd_wr.csv"
 
 role_weights = {}
 with open(weights, "r", encoding="utf-8") as file:

@@ -2,8 +2,8 @@ import os
 import json
 import re
 from src.utils import paths
-MD_FILE_PATH = paths.STATIC_DIR / "classes" / "champion_classes.md"
-BASE_OUTPUT_DIR = paths.STATIC_DIR / "classes"
+INPUT_FILE_PATH = paths.BASE_DIR / "docs" / "champion_classes.md"
+BASE_OUTPUT_DIR = paths.ASSETS_DIR / "classes"
 
 SECTION_PATTERN = re.compile(r"^START (.*?) ===\n(.*?)\nEND \1 ===", re.DOTALL | re.MULTILINE)
 HEADINGS_PATTERN = re.compile(r"^(.*?)\n-+$", re.MULTILINE)
