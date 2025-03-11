@@ -1,4 +1,4 @@
-# Real-Time Meta Analysis (RTMA)
+# Nomad
 
 ## Overview
 This project utilizes Python for data retrieval and integrates with a low-latency, real-time C++ overlay, providing dynamic analysis to enhance decision-making efficiency.
@@ -46,7 +46,7 @@ This project utilizes Python for data retrieval and integrates with a low-latenc
 
 ---
 
-## Setup, Build, and Run RTMA
+## Setup, Build, and Run Nomad
 
 The build_release.bat and build_debug.bat scripts performs all these steps except running.
 
@@ -85,12 +85,12 @@ cmake --build build/release
 cmake --build build/debug
 ```
 
-### 5. Run RTMA
+### 5. Run Nomad
 #### 🔹 Release Build
 ```sh
-./build/release/bin/RTMA.exe
+./build/release/bin/Nomad.exe
 ```
 #### 🔹 Debug Build
 ```sh
-./build/debug/bin/RTMA.exe
+./build/debug/bin/Nomad.exe
 ```

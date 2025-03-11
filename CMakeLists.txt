@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(RTMA)
+project(Nomad)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -17,11 +17,11 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BUILD_DIR}/lib)
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
-add_executable(RTMA src/cpp/main.cpp)
+add_executable(Nomad src/cpp/main.cpp)
 
-target_include_directories(RTMA PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(Nomad PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
-add_custom_command(TARGET RTMA POST_BUILD
+add_custom_command(TARGET Nomad POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${CMAKE_SOURCE_DIR}/data/champions.json
         ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/champions.json
