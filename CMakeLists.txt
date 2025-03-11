@@ -17,7 +17,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BUILD_DIR}/lib)
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
-add_executable(RTMA src/main.cpp)
+add_executable(RTMA src/cpp/main.cpp)
 
 target_include_directories(RTMA PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
