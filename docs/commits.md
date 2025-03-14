@@ -1,5 +1,11 @@
 # Conventional Commits Standard
 
+## 0. Tools
+
+- Use ***flake8*** for general linting, code style enforcement.
+- Use ***black*** for code auto-formatting to ensure correctness before commit.
+- Use ***pytest*** testing to ensure stability with new changes.
+
 ## 1. Commit Message Format
 All commit messages must follow the structured format:
 ```

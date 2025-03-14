@@ -2,6 +2,9 @@
 
 This document defines the required documentation format for all Python code in the project, ensuring consistency, readability, and maintainability.
 
+## 0. Tools
+- Use ***pydocstyle*** command to check docstring compliance.
+
 ---
 
 ## **1️⃣ Module Headers**
@@ -10,7 +13,7 @@ Every Python file must start with a **module-level docstring** that includes the
 ### ✅ **Example**
 ```python
 """
-watcher.py - Champion Select Watcher
+watcher.py - Champion Select Watcher.
 Version: 0.1.0
 Description:
     Monitors champion selection, evaluates team compositions.
