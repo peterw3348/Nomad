@@ -1,12 +1,30 @@
+"""
+lobby.py - League of Legends Champion Select Data Fetcher.
+
+Version: 0.1.0
+
+This module interacts with the League of Legends LCU API to fetch champion
+selection data during the lobby phase. It retrieves and processes the raw
+champion selection session JSON data.
+
+Functions:
+    - fetch_lobby_champions(port, password): Fetches the current champion selection data.
+"""
+
 import requests
 import json
 import sys
 
 from src.api.client.sanitize import sanitize_champion_data
 
+
 def fetch_lobby_champions(port, password):
     """
-    Fetches the current champion selection session data from the LCU API.
+    Fetch the current champion selection session data from the LCU API.
+
+    Args:
+        port (str): The authentication port for the LCU API.
+        password (str): The authentication token for the LCU API.
 
     Returns:
         dict: The raw JSON data if successful, else None.
@@ -24,14 +42,25 @@ def fetch_lobby_champions(port, password):
         print("Error fetching data:", e)
         return None
 
+
 if __name__ == "__main__":
+    """
+    Entry point for fetching champion selection data from the LCU API.
+
+    Usage:
+        python lobby.py <port> <password>
+
+    Args:
+        port (str): The authentication port for the LCU API.
+        password (str): The authentication token for the LCU API.
+    """
     if len(sys.argv) != 3:
         print("Usage: python lobby.py <port> <password>")
         sys.exit(1)
 
     port = sys.argv[1]
     password = sys.argv[2]
-    
+
     data = fetch_lobby_champions(port, password)
 
     if data:
