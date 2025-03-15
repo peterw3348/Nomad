@@ -55,9 +55,9 @@ The build_release.bat and build_debug.bat scripts performs all these steps excep
 venv\Scripts\Activate
 ```
 
-### 1. Fetch Data
+### 1. Install Nomad using setup file
 ```sh
-python -m src.api.data_dragon.data_dragon
+pip install -e .
 ```
 
 ### 2. Clean Previous Builds
