@@ -1,13 +1,61 @@
+"""
+champion.py - Champion Data Handler.
+
+Version: 0.1.0
+
+This module provides functionality to load, retrieve, and debug champion data
+from a JSON file. The `Champ` class represents an in-game champion with various
+attributes and ratings.
+
+Classes:
+    - Champ: Represents a champion with attributes such as role, damage type, and ratings.
+
+Functions:
+    - load_champs(): Load champions from JSON and caches them.
+    - get(cid): Retrieve a champion by its ID.
+    - debug(): Print champion attributes for debugging.
+"""
+
 import json
 
 from src.utils import paths
 
 DATA_PATH = paths.ASSETS_DIR / "champion_ratings.json"
 
+
 class Champ:
-    _champs = None  # Cached
+    """
+    A class representing a champion and its attributes.
+
+    Attributes:
+        cid (str): Champion ID.
+        name (str): Champion name.
+        primary (str): Primary role classification.
+        secondary (str): Secondary role classification.
+        ratings (dict): Ratings of champion performance.
+        attacks (str): Type of basic attacks.
+        style (int): Champion playstyle score.
+        ability (str): Ability type.
+        type (str): Damage type (physical/magic).
+        diff (int): Difficulty rating.
+        raw_gain (float): Unprocessed gain value (deferred field).
+        raw_wr (float): Unprocessed win rate (deferred field).
+        norm_gain (float): Normalized gain value (deferred field).
+        norm_wr (float): Normalized win rate (deferred field).
+        flags (list): Special champion attributes or conditions.
+        score (float): Overall champion score.
+    """
+
+    _champs = None  # Cached champion data
 
     def __init__(self, cid, data):
+        """
+        Initialize a Champ instance with given attributes.
+
+        Args:
+            cid (str): The champion ID.
+            data (dict): The dictionary containing champion details.
+        """
         self.cid = cid
         self.name = data["name"]
         self.primary = data["Primary"]
@@ -18,7 +66,7 @@ class Champ:
         self.ability = data["Abilities"]
         self.type = data["Damage Type"]
         self.diff = data["Difficulty"]
-        
+
         # Deferred fields
         self.raw_gain = None
         self.raw_wr = None
@@ -28,11 +76,12 @@ class Champ:
         self.score = None
 
     def __repr__(self):
+        """Return a string representation of the Champ instance."""
         return f"Champ({self.cid}, {self.name})"
 
     @classmethod
     def load_champs(cls):
-        """Loads champions from JSON and caches them."""
+        """Load champion data from a JSON file and cache it."""
         if cls._champs is None:
             with open(DATA_PATH, "r", encoding="utf-8") as file:
                 data = json.load(file)
@@ -41,12 +90,12 @@ class Champ:
 
     @classmethod
     def get(cls, cid):
-        """Retrieve a champion by ID."""
+        """Retrieve a champion by its ID."""
         champs = cls.load_champs()
         return champs.get(cid, None)
 
     def debug(self):
-        """Prints all champion attributes for debugging."""
+        """Print champion attributes for debugging."""
         info = f"""
         Champ ID: {self.cid}
         Name: {self.name}
@@ -67,11 +116,12 @@ class Champ:
         """
         print(info)
 
+
 if __name__ == "__main__":
     champs = Champ.load_champs()
 
     test_id = "266"
-    champ = Champ.get(test_id) # aatrox
+    champ = Champ.get(test_id)  # aatrox
     if champ:
         champ.debug()
     else:
