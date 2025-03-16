@@ -25,7 +25,7 @@ from src.api.client.status import Status, get_status
 from src.core.evaluator import evaluator
 from src.utils import paths
 
-version = "v0.1"
+version = "0.1.0"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 MAX_RETRIES = 3
