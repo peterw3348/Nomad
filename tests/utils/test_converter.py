@@ -15,24 +15,37 @@ FAKE_CHAMPION_MAPPING = {
     "86": "Garen",
     "245": "Ekko",
     "141": "Kayn",
-    "893": "Briar"
+    "893": "Briar",
 }
 
 # Sample input for testing
 FAKE_INPUT_DATA = {
     "team": [136, 64, 54, 875, 498],  # Known champions
-    "bench": [203, 517, 86, 245, 141, 999]  # 999 is an unknown ID
+    "bench": [203, 517, 86, 245, 141, 999],  # 999 is an unknown ID
 }
 
 EXPECTED_OUTPUT = {
     "team": ["Aurelion Sol", "Lee Sin", "Malphite", "Sett", "Xayah"],
-    "bench": ["Kindred", "Sylas", "Garen", "Ekko", "Kayn", "Unknown"]  # 999 should be "Unknown"
+    "bench": [
+        "Kindred",
+        "Sylas",
+        "Garen",
+        "Ekko",
+        "Kayn",
+        "Unknown",
+    ],  # 999 should be "Unknown"
 }
 
 
-@patch("src.utils.paths.ASSETS_DIR", new=Path("/fake/path"))  # Correctly use a Path object
+@patch(
+    "src.utils.paths.ASSETS_DIR", new=Path("/fake/path")
+)  # Correctly use a Path object
 @patch("pathlib.Path.exists", return_value=True)  # Mock file existence check
-@patch("pathlib.Path.open", new_callable=mock_open, read_data=json.dumps(FAKE_CHAMPION_MAPPING))
+@patch(
+    "pathlib.Path.open",
+    new_callable=mock_open,
+    read_data=json.dumps(FAKE_CHAMPION_MAPPING),
+)
 def test_load_champion_mapping(mock_file, mock_exists):
     """Test that champion mappings are loaded correctly from a JSON file."""
     result = load_champion_mapping()
@@ -58,7 +71,4 @@ def test_substitute_champion_ids_invalid_input():
 def test_substitute_champion_ids_no_mapping(mock_load_mapping):
     """Test behavior when the champion mapping file is empty."""
     result = substitute_champion_ids(FAKE_INPUT_DATA)
-    assert result == {
-        "team": ["Unknown"] * 5,
-        "bench": ["Unknown"] * 6
-    }
+    assert result == {"team": ["Unknown"] * 5, "bench": ["Unknown"] * 6}
