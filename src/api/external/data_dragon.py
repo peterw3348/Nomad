@@ -1,15 +1,3 @@
-"""
-data_dragon.py - League of Legends Data Dragon API Fetcher.
-
-Version: 0.1.0
-
-This module retrieves champion data from Riot Games' Data Dragon API.
-It fetches champion names and their corresponding IDs, saving the data locally.
-
-Functions:
-    - get_champion_names(): Fetches champion names and IDs from the Data Dragon API.
-"""
-
 import requests
 import json
 import os
@@ -25,18 +13,26 @@ def get_champion_names():
 
     Returns:
         dict: A dictionary mapping champion IDs to champion names.
-        If the request fails, returns an empty dictionary.
+        If the request fails or returns invalid data, returns an empty dictionary.
     """
     response = requests.get(CHAMPION_URL)
     if response.status_code == 200:
-        data = response.json()
-        champions = {}
-        for champ in data["data"]:
-            champions[data["data"][champ]["key"]] = champ
-        return champions
-    else:
-        print("Failed to fetch champion data:", response.status_code)
-        return {}
+        try:
+            data = response.json()
+            if "data" not in data:
+                print("Malformed response: Missing 'data' key.")
+                return {}
+
+            champions = {}
+            for champ in data["data"]:
+                champions[data["data"][champ]["key"]] = champ
+            return champions
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"Error parsing Data Dragon response: {e}")
+            return {}
+
+    print("Failed to fetch champion data:", response.status_code)
+    return {}
 
 
 if __name__ == "__main__":

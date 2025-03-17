@@ -1,5 +1,5 @@
 """
-champion_mapping.py - Champion ID Mapping Utility.
+converter.py - Champion ID Mapping Utility.
 
 Version: 0.1.0
 
