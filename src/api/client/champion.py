@@ -68,12 +68,12 @@ class Champ:
         self.diff = data["Difficulty"]
 
         # Deferred fields
-        self.raw_gain = None
-        self.raw_wr = None
-        self.norm_gain = None
-        self.norm_wr = None
+        self.raw_gain = 0.0
+        self.raw_wr = 50.0
+        self.norm_gain = 0.0
+        self.norm_wr = 0.0
         self.flags = []
-        self.score = None
+        self.score = 0.0
 
     def __repr__(self):
         """Return a string representation of the Champ instance."""
