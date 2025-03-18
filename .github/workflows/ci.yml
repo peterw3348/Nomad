@@ -1,0 +1,36 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Verify Python Version
+        run: python --version
+
+      - name: Install Package and Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e .
+
+      - name: Make validate.sh Executable (if needed)
+        run: |
+          git update-index --chmod=+x validate.sh
+          chmod +x validate.sh
+        if: runner.os != 'Windows'
+
+      - name: Run validate.sh
+        run: ./validate.sh
