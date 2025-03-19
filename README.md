@@ -1,5 +1,7 @@
 # Nomad
 
+![CI Pipeline](https://github.com/peterw3348/Nomad/actions/workflows/ci.yml/badge.svg)
+
 ## Overview
 This project utilizes Python for data retrieval and integrates with a low-latency, real-time C++ overlay, providing dynamic analysis to enhance decision-making efficiency.
 
