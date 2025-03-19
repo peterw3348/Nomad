@@ -1,9 +1,26 @@
 name: CI Pipeline
 
 on:
+  push:
+    branches:
+      - main
+      - "feature/*"
+      - "refactor/*"
+      - "fix/*"
+      - "ci/*"
+      - "docs/*"
+      - "release/*"
+      - "hotfix/*"
   pull_request:
     branches:
       - main
+      - "feature/*"
+      - "refactor/*"
+      - "fix/*"
+      - "ci/*"
+      - "docs/*"
+      - "release/*"
+      - "hotfix/*"
 
 jobs:
   validation:
@@ -16,21 +33,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: "3.10"
 
       - name: Verify Python Version
         run: python --version
 
-      - name: Install Package and Dependencies
+      - name: Install Dependencies
         run: |
           pip install --upgrade pip
+          python -m pip install -r requirements.txt
           pip install -e .
 
-      - name: Make validate.sh Executable (if needed)
-        run: |
-          git update-index --chmod=+x validate.sh
-          chmod +x validate.sh
-        if: runner.os != 'Windows'
+      - name: Validate Commit Messages
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: commitlint.config.js
+
+      - name: Ensure validate.sh is Executable
+        run: chmod +x validate.sh
 
       - name: Run validate.sh
         run: ./validate.sh
