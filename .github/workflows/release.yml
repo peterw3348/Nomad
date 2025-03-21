@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-            fetch-depth: 0
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,15 +33,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Bump Version
-        run: cz bump --yes --changelog
-
-      - name: Push Bump Commit + Tags
+      - name: Bump version and changelog (uncommitted)
+        id: cz
         run: |
-          git push
-          git push --tags
+          cz bump --yes --changelog
+        continue-on-error: false
 
-      - name: Create Pull Request to main
+      - name: Create PR to main with version bump
         uses: peter-evans/create-pull-request@v5
         with:
           base: main
@@ -50,5 +48,12 @@ jobs:
           body: |
             Auto-created PR to merge the release branch `${{ github.ref_name }}` into `main`
             after version bump and tagging.
+          commit-message: "chore(release): bump version"
+          add-paths: |
+            pyproject.toml
+            CHANGELOG.md
           delete-branch: false
           labels: automated
+
+      - name: Push tags (after PR commit)
+        run: git push --tags
