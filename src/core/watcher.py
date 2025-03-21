@@ -1,8 +1,6 @@
 """
 watcher.py - ARAM Champion Select Watcher.
 
-Version: 0.1.0
-
 This script monitors League of Legends ARAM champion select,
 evaluates champion picks, and logs the final team composition.
 
@@ -24,8 +22,8 @@ from src.api.client.sanitize import sanitize_champion_data
 from src.api.client.status import Status, get_status
 from src.core.evaluator import evaluator
 from src.utils import paths
+from src.__version__ import __version__ as version
 
-version = "0.1.0"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 MAX_RETRIES = 3

@@ -1,3 +1,18 @@
+"""
+data_dragon.py - Champion Name and ID Fetcher from Riot's Data Dragon API.
+
+This module fetches a mapping of champion IDs to champion names using the
+official Riot Data Dragon endpoint. It is primarily used to populate local
+static data for use in ARAM analysis and overlay tools.
+
+Functions:
+    - get_champion_names(): Fetch champion names and their numeric IDs from
+    the Data Dragon API.
+
+Executed as a script, it saves the fetched data as a JSON file to the local
+assets directory.
+"""
+
 import requests
 import json
 import os

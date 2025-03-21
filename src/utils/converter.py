@@ -1,8 +1,6 @@
 """
 converter.py - Champion ID Mapping Utility.
 
-Version: 0.1.0
-
 This module provides functions to load and process champion ID-to-name mappings
 for League of Legends champion data.
 

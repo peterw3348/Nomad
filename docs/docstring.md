@@ -14,7 +14,7 @@ Every Python file must start with a **module-level docstring** that includes the
 ```python
 """
 watcher.py - Champion Select Watcher.
-Version: 0.1.0
+
 Description:
     Monitors champion selection, evaluates team compositions.
 """

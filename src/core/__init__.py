@@ -1,8 +1,6 @@
 """
 src.core - Core Package.
 
-Version: 0.1.0
-
 This package serves as the main logic layer of the project, responsible for
 processing champion selection data, evaluating compositions, and monitoring
 League of Legends ARAM champion select.

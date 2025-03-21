@@ -7,6 +7,12 @@ GREEN="\e[32m"   # Passed
 RED="\e[31m"     # Failed
 BOLD="\e[1m"
 
+# Extract version from Python __version__.py
+VERSION=$(grep "__version__" src/__version__.py | sed -E "s/__version__ = ['\"](.*)['\"]/\\1/")
+
+# Print version
+echo -e "${CYAN}${BOLD}Running Validation for Version: $VERSION${RESET}"
+
 # Track overall status
 declare -A TOOL_RESULTS
 EXIT_CODE=0

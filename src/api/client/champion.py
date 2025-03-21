@@ -1,8 +1,6 @@
 """
 champion.py - Champion Data Handler.
 
-Version: 0.1.0
-
 This module provides functionality to load, retrieve, and debug champion data
 from a JSON file. The `Champ` class represents an in-game champion with various
 attributes and ratings.

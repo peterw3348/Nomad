@@ -1,8 +1,6 @@
 """
 sanitize.py - Champion Data Extractor and Processor.
 
-Version: 0.1.0
-
 This module processes champion selection data from the League of Legends client,
 extracting and grouping champion IDs for further analysis.
 

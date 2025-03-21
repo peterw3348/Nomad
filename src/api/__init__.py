@@ -1,8 +1,6 @@
 """
 src.api - API Package.
 
-Version: 0.1.0
-
 This package serves as the main API layer of the project, providing interfaces for
 internal and external data retrieval, processing, and communication.
 

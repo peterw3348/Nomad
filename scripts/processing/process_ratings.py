@@ -1,8 +1,6 @@
 """
 process_champion_ratings.py - Champion Ratings Extraction and Processing.
 
-Version: 0.1.0
-
 This script processes raw champion rating data from a text file and converts it into structured JSON format.
 The extracted data includes champion roles, ratings, attack styles, abilities, damage type, and difficulty.
 

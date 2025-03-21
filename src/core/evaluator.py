@@ -1,8 +1,6 @@
 """
 evaluator.py - ARAM Champion Evaluation and Scoring.
 
-Version: 0.1.0
-
 This module processes League of Legends ARAM champion select data,
 evaluates champion picks based on role weights and win rates,
 and computes optimal team compositions.

@@ -1,8 +1,6 @@
 """
 src.utils - Utility Package.
 
-Version: 0.1.0
-
 This package provides general utility functions used throughout the project.
 These utilities include file handling and data transformations.
 
