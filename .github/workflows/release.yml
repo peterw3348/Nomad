@@ -1,0 +1,52 @@
+name: Release Version on Release Branch
+
+on:
+  push:
+    branches:
+      - release/**
+      - release
+
+jobs:
+  bump_version:
+    name: Bump Version & Create PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Commitizen
+        run: pip install commitizen
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump Version
+        run: cz bump --yes --changelog
+
+      - name: Push Bump Commit + Tags
+        run: |
+          git push
+          git push --tags
+
+      - name: Create Pull Request to main
+        uses: peter-evans/create-pull-request@v5
+        with:
+          base: main
+          branch: ${{ github.ref_name }}
+          title: "Release ${{ github.ref_name }} → main"
+          body: |
+            Auto-created PR to merge the release branch `${{ github.ref_name }}` into `main`
+            after version bump and tagging.
+          delete-branch: false
+          labels: automated
