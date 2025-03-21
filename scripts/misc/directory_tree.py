@@ -1,8 +1,6 @@
 """
 directory_tree.py - Project Directory Structure Utility.
 
-Version: 0.1.0
-
 This script generates a visual representation of the project's directory structure,
 while respecting the `.gitignore` file and skipping hidden files.
 

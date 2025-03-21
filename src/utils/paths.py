@@ -1,8 +1,6 @@
 """
 paths.py - Project Directory Paths.
 
-Version: 0.1.0
-
 This module defines commonly used directory paths within the project,
 allowing easy access to various file locations such as data, assets,
 and API modules.

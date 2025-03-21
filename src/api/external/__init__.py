@@ -1,8 +1,6 @@
 """
 external - External API Integrations.
 
-Version: 0.1.0
-
 This package contains modules responsible for interfacing with external APIs.
 It provides functions to fetch and process data from external sources.
 

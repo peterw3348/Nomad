@@ -1,8 +1,6 @@
 """
 champion.py - Champion Data Model.
 
-Version: 0.1.0
-
 This module defines the Champion class, which represents a League of Legends
 champion and their associated attributes such as roles, ratings, and abilities.
 

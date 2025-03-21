@@ -1,8 +1,6 @@
 """
 acquire.py - League of Legends Client Credential Retriever.
 
-Version: 0.1.0
-
 This module extracts authentication credentials from the League of Legends,
 client. It retrieves the app port, authentication token, and the
 PUUID (Player UUID) required for interacting with the League Client API.

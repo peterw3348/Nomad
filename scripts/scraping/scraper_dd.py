@@ -1,8 +1,6 @@
 """
 scrape_dd.py - Champion Data Scraper.
 
-Version: 0.1.0
-
 This script scrapes champion data from a specified website, extracting champion names,
 image keys, win rates, and pick rates. The data is then saved as a CSV file for further analysis.
 

@@ -1,8 +1,6 @@
 """
 src - Main Source Package.
 
-Version: 0.1.0
-
 This package contains the core implementation of the project, including API interactions,
 data processing, champion evaluation, and utility functions.
 

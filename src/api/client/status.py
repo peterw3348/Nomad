@@ -1,8 +1,6 @@
 """
 status.py - League of Legends Gameflow Status Retriever.
 
-Version: 0.1.0
-
 This module retrieves the current gameflow phase status from the League of Legends LCU API.
 It provides an enumeration of possible game phases and a function to fetch the current status.
 

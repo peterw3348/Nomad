@@ -1,8 +1,6 @@
 """
 lobby.py - League of Legends Champion Select Data Fetcher.
 
-Version: 0.1.0
-
 This module interacts with the League of Legends LCU API to fetch champion
 selection data during the lobby phase. It retrieves and processes the raw
 champion selection session JSON data.

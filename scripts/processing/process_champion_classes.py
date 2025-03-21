@@ -1,8 +1,6 @@
 """
 process_champion_classes.py - Champion Class Extraction and Processing.
 
-Version: 0.1.0
-
 This script extracts champion class data from a Markdown document and saves the processed data
 as JSON files categorized by class.
 

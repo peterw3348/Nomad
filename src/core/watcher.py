@@ -1,8 +1,6 @@
 """
 watcher.py - ARAM Champion Select Watcher.
 
-Version: 0.1.0
-
 This script monitors League of Legends ARAM champion select,
 evaluates champion picks, and logs the final team composition.
 
