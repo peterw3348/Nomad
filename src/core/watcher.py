@@ -5,8 +5,8 @@ This script monitors League of Legends ARAM champion select,
 evaluates champion picks, and logs the final team composition.
 
 Functions:
-    - log_final_champion_select(evaluated_data): Logs the final state of champion select before exiting.
-    - display_lobby_champions(evaluated_data): Displays Team and Bench champions in a structured format only if data has changed.
+    - log_final_champion_select(evaluated_pool): Logs the final state of champion select before exiting.
+    - display_lobby_champions(evaluated_pool): Displays Team and Bench champions in a structured format only if data has changed.
     - wait_for_champ_select(port, password): Waits for the game to enter champion select before proceeding.
     - monitor_lobby(port, password, puuid): Monitors champion select, retrieves lobby data, and evaluates champion choices.
     - main(): Entry point for initializing credentials and monitoring the champion select process.
@@ -27,17 +27,16 @@ from src.__version__ import __version__ as version
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 MAX_RETRIES = 3
-WAIT_INTERVAL = 10  # Time between status checks
-POLL_INTERVAL = 1  # Time between lobby fetch attempts
-MAX_FAILS_BEFORE_EXIT = 10  # Stop retrying after too many failures
+WAIT_INTERVAL = 10
+POLL_INTERVAL = 1
+MAX_FAILS_BEFORE_EXIT = 10
 LOG_PATH = paths.DATA_DIR / "logs" / version
 
-# Setup logging
 LOG_PATH.mkdir(parents=True, exist_ok=True)
-previous_lobby_data = None  # Store last fetched data to prevent redundant reprints
+previous_lobby_data = None
 
 
-def log_final_champion_select(evaluated_data):
+def log_final_champion_select(pool):
     """
     Log the final state of champion select before exiting.
 
@@ -54,40 +53,44 @@ def log_final_champion_select(evaluated_data):
     )
     log_lines.append("-" * 80)
 
-    player_champ = evaluated_data["player"][0] if evaluated_data["player"] else None
-
-    for champ in evaluated_data["team"]:
-        if champ == player_champ:
+    for champ in pool.team:
+        if champ == pool.player:
             log_lines.append(
-                f"> {champ.cid:<6} {champ.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
+                f"> {champ.cid:<6} {champ.meta.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
             )
         else:
-            log_lines.append(f"  {champ.cid:<6} {champ.name:<18}")
+            log_lines.append(f"  {champ.cid:<6} {champ.meta.name:<18}")
 
     log_lines.append("Bench ===")
-    for champ in evaluated_data["bench"]:
+    for champ in pool.bench:
         log_lines.append(
-            f"  {champ.cid:<6} {champ.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
+            f"  {champ.cid:<6} {champ.meta.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
         )
 
     with open(log_file, "w", encoding="utf-8") as f:
         f.write("\n".join(log_lines))
 
 
-def display_lobby_champions(evaluated_data):
+def display_lobby_champions(pool):
     """
     Display Team and Bench champions in a structured format only if data has changed.
 
     Args:
         evaluated_data (dict): Processed champion selection data containing team and bench information.
     """
+    current_ids = {
+        "team": [champ.cid for champ in pool.team],
+        "bench": [champ.cid for champ in pool.bench],
+        "player": pool.player.cid,
+    }
+
     global previous_lobby_data
-    if evaluated_data == previous_lobby_data:
-        return  # Skip printing if no new data
+    if current_ids == previous_lobby_data:
+        return
 
-    previous_lobby_data = evaluated_data  # Update state
+    previous_lobby_data = current_ids
 
-    sys.stdout.write("\033c")  # Clears terminal
+    sys.stdout.write("\033c")
     sys.stdout.flush()
 
     output_lines = ["\nChampion Select:"]
@@ -96,20 +99,18 @@ def display_lobby_champions(evaluated_data):
     )
     output_lines.append("-" * 80)
 
-    player_champ = evaluated_data["player"][0] if evaluated_data["player"] else None
-
-    for champ in evaluated_data["team"]:
-        if champ == player_champ:
+    for champ in pool.team:
+        if champ == pool.player:
             output_lines.append(
-                f"> {champ.cid:<6} {champ.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
+                f"> {champ.cid:<6} {champ.meta.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
             )
         else:
-            output_lines.append(f"  {champ.cid:<6} {champ.name:<18}")
+            output_lines.append(f"  {champ.cid:<6} {champ.meta.name:<18}")
 
     output_lines.append("Bench ===")
-    for champ in evaluated_data["bench"]:
+    for champ in pool.bench:
         output_lines.append(
-            f"  {champ.cid:<6} {champ.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
+            f"  {champ.cid:<6} {champ.meta.name:<18} | {champ.score:<10.1f} {champ.norm_gain:<10.1f} {champ.norm_wr:<10.1f} {champ.raw_wr:<10.1f}"
         )
 
     sys.stdout.write("\n".join(output_lines) + "\n")
@@ -143,8 +144,7 @@ def monitor_lobby(port, password, puuid):
         password (str): The authentication token for the LCU API.
         puuid (str): The player's unique identifier.
     """
-    evaluated_data = None
-
+    pool = None
     while True:
         wait_for_champ_select(port, password)
         failure_count = 0
@@ -152,15 +152,16 @@ def monitor_lobby(port, password, puuid):
         while True:
             status = get_status(port, password)
             if status != Status.CHAMPSELECT.value:
-                log_final_champion_select(evaluated_data)
+                if pool:
+                    log_final_champion_select(pool)
                 print("\nChampion Select ended. Waiting for next game...\n")
                 break
 
             lobby_data = fetch_lobby_champions(port, password)
             if lobby_data:
                 sanitized_data = sanitize_champion_data(lobby_data, puuid)
-                evaluated_data = evaluator(sanitized_data)
-                display_lobby_champions(evaluated_data)
+                pool = evaluator(sanitized_data)
+                display_lobby_champions(pool)
                 failure_count = 0
             else:
                 failure_count += 1
