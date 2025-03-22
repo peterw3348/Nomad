@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch, mock_open
-from src.api.client.champion import Champ
+from src.api.client.champion import ChampionMetadata, ChampionState, load_champions
 
 
 @pytest.fixture
@@ -34,56 +34,46 @@ def mock_champion_data():
 
 @patch("builtins.open", new_callable=mock_open)
 @patch("json.load")
-@patch(
-    "src.api.client.champion.DATA_PATH", "mock_path/champion_ratings.json"
-)  # Override file path
-def test_load_champs(mock_json_load, mock_file_open, mock_champion_data):
+def test_load_champions(mock_json_load, mock_file_open, mock_champion_data):
     """Test loading champions from a JSON file."""
     mock_json_load.return_value = mock_champion_data
 
-    champs = Champ.load_champs()
+    champs = load_champions()
 
     assert "266" in champs
     assert "103" in champs
-    assert champs["266"].name == "Aatrox"
-    assert champs["103"].name == "Ahri"
+    assert isinstance(champs["266"], ChampionState)
+    assert champs["266"].meta.name == "Aatrox"
+    assert champs["103"].meta.name == "Ahri"
 
 
-@patch.object(Champ, "load_champs")
-def test_get_existing_champion(mock_load_champs, mock_champion_data):
-    """Test retrieving a champion that exists."""
-    mock_load_champs.return_value = {
-        cid: Champ(cid, data) for cid, data in mock_champion_data.items()
-    }
+def test_champion_metadata_fields(mock_champion_data):
+    """Test individual metadata fields are correctly assigned."""
+    meta = ChampionMetadata("266", mock_champion_data["266"])
 
-    champ = Champ.get("266")
-
-    assert champ is not None
-    assert champ.name == "Aatrox"
-    assert champ.primary == "Fighter"
-    assert champ.secondary == "Tank"
+    assert meta.name == "Aatrox"
+    assert meta.primary == "Fighter"
+    assert meta.secondary == "Tank"
+    assert meta.type == "Physical"
+    assert meta.ratings["Damage"] == 8
 
 
-@patch.object(Champ, "load_champs")
-def test_get_nonexistent_champion(mock_load_champs, mock_champion_data):
-    """Test retrieving a champion that does not exist."""
-    mock_load_champs.return_value = {
-        cid: Champ(cid, data) for cid, data in mock_champion_data.items()
-    }
+def test_champion_state_fields(mock_champion_data):
+    """Test ChampionState correctly wraps metadata and initializes defaults."""
+    meta = ChampionMetadata("266", mock_champion_data["266"])
+    champ = ChampionState(meta)
 
-    champ = Champ.get("999")  # Non-existent ID
+    assert champ.cid == "266"
+    assert champ.raw_gain == 0.0
+    assert champ.norm_wr == 0.0
+    assert champ.score == 0.0
+    assert champ.meta.name == "Aatrox"
 
-    assert champ is None
 
-
-@patch.object(Champ, "load_champs")
-def test_debug_output(mock_load_champs, mock_champion_data, capsys):
-    """Test the debug function output."""
-    mock_load_champs.return_value = {
-        cid: Champ(cid, data) for cid, data in mock_champion_data.items()
-    }
-
-    champ = Champ.get("266")
+def test_champion_debug_output(capsys, mock_champion_data):
+    """Test debug output includes important champion information."""
+    meta = ChampionMetadata("266", mock_champion_data["266"])
+    champ = ChampionState(meta)
     champ.debug()
 
     captured = capsys.readouterr()

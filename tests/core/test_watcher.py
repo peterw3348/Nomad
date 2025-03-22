@@ -6,14 +6,14 @@ from src.core.watcher import (
     monitor_lobby,
 )
 from src.api.client.status import Status
+from src.api.client.champion import ChampionPool
 
 
 @pytest.fixture
 def mock_evaluated_data():
-    """Mock evaluated data fixture for tests."""
     mock_lee_sin = MagicMock()
     mock_lee_sin.cid = "64"
-    mock_lee_sin.name = "Lee Sin"
+    mock_lee_sin.meta.name = "Lee Sin"
     mock_lee_sin.score = 50.0
     mock_lee_sin.norm_gain = 10.0
     mock_lee_sin.norm_wr = 5.0
@@ -21,17 +21,18 @@ def mock_evaluated_data():
 
     mock_aurelion_sol = MagicMock()
     mock_aurelion_sol.cid = "136"
-    mock_aurelion_sol.name = "Aurelion Sol"
+    mock_aurelion_sol.meta.name = "Aurelion Sol"
     mock_aurelion_sol.score = 45.0
     mock_aurelion_sol.norm_gain = 12.0
     mock_aurelion_sol.norm_wr = 4.0
     mock_aurelion_sol.raw_wr = 2.0
 
-    return {
-        "team": [mock_lee_sin],
-        "bench": [mock_aurelion_sol],
-        "player": [mock_lee_sin],
-    }
+    mock_pool = MagicMock(spec=ChampionPool)
+    mock_pool.team = [mock_lee_sin]
+    mock_pool.bench = [mock_aurelion_sol]
+    mock_pool.player = mock_lee_sin
+
+    return mock_pool
 
 
 @patch("builtins.open", new_callable=mock_open)
@@ -44,19 +45,18 @@ def test_log_final_champion_select(mock_file, mock_evaluated_data):
 def test_display_lobby_champions(mock_stdout):
     mock_champ = MagicMock()
     mock_champ.cid = "64"
-    mock_champ.name = "Lee Sin"
+    mock_champ.meta.name = "Lee Sin"
     mock_champ.score = 10.0
     mock_champ.norm_gain = 2.0
     mock_champ.norm_wr = 3.0
     mock_champ.raw_wr = 4.0
 
-    mock_evaluated_data = {
-        "team": [mock_champ],
-        "bench": [mock_champ],
-        "player": [mock_champ],
-    }
+    mock_pool = MagicMock(spec=ChampionPool)
+    mock_pool.team = [mock_champ]
+    mock_pool.bench = [mock_champ]
+    mock_pool.player = mock_champ
 
-    display_lobby_champions(mock_evaluated_data)
+    display_lobby_champions(mock_pool)
     mock_stdout.assert_called()
 
 
