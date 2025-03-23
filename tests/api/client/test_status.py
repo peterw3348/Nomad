@@ -1,3 +1,5 @@
+"""Unit tests for the api > client > test status."""
+
 import pytest
 import requests
 from unittest.mock import patch

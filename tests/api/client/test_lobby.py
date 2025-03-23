@@ -1,3 +1,5 @@
+"""Unit tests for the api > client > test lobby."""
+
 import requests
 from unittest.mock import patch
 from src.api.client.lobby import fetch_lobby_champions

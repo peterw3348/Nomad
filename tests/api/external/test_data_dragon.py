@@ -1,3 +1,5 @@
+"""Unit tests for the api > external > test data dragon."""
+
 from unittest.mock import patch
 from src.api.external.data_dragon import get_champion_names
 
