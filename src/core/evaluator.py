@@ -145,14 +145,8 @@ def compute_composition_gain(pool: ChampionPool, verbose=False):
         for cat in base:
             base[cat] += champ.meta.ratings.get(cat, 0)
 
-    player_gain = sum(
-        diminishing_returns(base[cat] + apply_role_weights(pool.player, cat))
-        - diminishing_returns(base[cat])
-        for cat in base
-    )
-
     gains = []
-    for champ in pool.bench:
+    for champ in pool.available:
         gain = sum(
             diminishing_returns(base[cat] + apply_role_weights(champ, cat))
             - diminishing_returns(base[cat])
@@ -161,21 +155,13 @@ def compute_composition_gain(pool: ChampionPool, verbose=False):
         champ.raw_gain = gain
         gains.append(gain)
 
-    all_gains = gains + [player_gain]
-    mean, std = np.mean(all_gains), max(np.std(all_gains), 1e-6)
-
+    mean, std = np.mean(gains), max(np.std(gains), 1e-6)
     if verbose:
         print(f"Gain normalization: mean={mean:.4f}, std={std:.4f}")
 
-    for champ in pool.bench:
+    for champ in pool.available:
         champ.norm_gain = round(((champ.raw_gain - mean) / std) * 50, 2)
         champ.score = round((champ.norm_gain * 0.7) + (champ.norm_wr * 0.3), 2)
-
-    pool.player.raw_gain = player_gain
-    pool.player.norm_gain = round(((player_gain - mean) / std) * 50, 2)
-    pool.player.score = round(
-        (pool.player.norm_gain * 0.7) + (pool.player.norm_wr * 0.3), 2
-    )
 
     pool.bench.sort(key=lambda c: c.score, reverse=True)
     return pool
