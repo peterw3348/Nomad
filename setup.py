@@ -1,3 +1,5 @@
+"""Setup script for the nomad-overlay package."""
+
 from setuptools import setup, find_packages
 
 setup(

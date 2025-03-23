@@ -1,3 +1,5 @@
+"""Unit tests for the api > client > test champion."""
+
 import pytest
 from unittest.mock import patch, mock_open
 from src.api.client.champion import ChampionMetadata, ChampionState, load_champions

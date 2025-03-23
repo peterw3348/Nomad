@@ -26,6 +26,7 @@ class ChampionMetadata:
     """Immutable metadata describing a champion."""
 
     def __init__(self, cid, data):
+        """Initialize ChampionMetadata with static data fields."""
         self.cid = cid
         self.name = data["name"]
         self.primary = data["Primary"]
@@ -38,6 +39,7 @@ class ChampionMetadata:
         self.diff = data["Difficulty"]
 
     def __repr__(self):
+        """Return a string representation of the ChampionMetadata."""
         return f"ChampionMetadata({self.cid}, {self.name})"
 
 
@@ -45,6 +47,7 @@ class ChampionState:
     """Dynamic champion state used during evaluation."""
 
     def __init__(self, meta: ChampionMetadata):
+        """Initialize ChampionState with evaluation-time data."""
         self.meta = meta
         self.cid = meta.cid
 
@@ -57,9 +60,11 @@ class ChampionState:
         self.score = 0.0
 
     def __repr__(self):
+        """Return a string representation of the ChampionState."""
         return f"ChampionState({self.meta.name}, Score={self.score})"
 
     def debug(self):
+        """Print detailed champion state for debugging purposes."""
         info = f"""
         Champ ID: {self.cid}
         Name: {self.meta.name}
@@ -94,6 +99,7 @@ class ChampionPool:
     """
 
     def __init__(self, grouped, all_champs):
+        """Initialize ChampionPool from grouped champion IDs and metadata."""
         self.player_id = str(grouped["player"][0])
         self.team = [all_champs[str(cid)] for cid in grouped["team"]]
         self.bench = [all_champs[str(cid)] for cid in grouped["bench"]]
@@ -101,10 +107,12 @@ class ChampionPool:
 
     @property
     def available(self):
+        """Champions available to the player: reroll options + locked-in."""
         return [self.player] + self.bench
 
     @property
     def unavailable(self):
+        """Champions on the team excluding the player's locked-in champion."""
         return [champ for champ in self.team if champ.cid != self.player_id]
 
 

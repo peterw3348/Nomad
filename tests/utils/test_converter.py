@@ -1,3 +1,5 @@
+"""Unit tests for the utils > test converter."""
+
 import json
 from unittest.mock import patch, mock_open
 from pathlib import Path

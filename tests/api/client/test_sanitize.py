@@ -1,3 +1,5 @@
+"""Unit tests for the api > client > test sanitize."""
+
 import json
 import pytest
 from src.api.client.sanitize import sanitize_champion_data

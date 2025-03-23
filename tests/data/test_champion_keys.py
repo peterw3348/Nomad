@@ -1,3 +1,5 @@
+"""Unit tests for the data > test champion keys."""
+
 import json
 import pytest
 from src.utils import paths
@@ -5,7 +7,7 @@ from src.utils import paths
 
 @pytest.fixture
 def load_champion_data():
-    """Loads real champion mapping and champion ratings data for validation."""
+    """Load real champion mapping and champion ratings data for validation."""
     champions_path = paths.ASSETS_DIR / "champions.json"
     ratings_path = paths.ASSETS_DIR / "champion_ratings.json"
 

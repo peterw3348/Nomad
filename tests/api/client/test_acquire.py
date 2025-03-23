@@ -1,3 +1,5 @@
+"""Unit tests for the api > client > test acquire."""
+
 import requests
 from unittest.mock import patch, MagicMock
 from src.api.client.acquire import get_credentials, get_process, get_puuid
