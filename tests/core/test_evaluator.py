@@ -1,3 +1,5 @@
+"""Unit tests for the core > test evaluator."""
+
 import pytest
 import numpy as np
 from unittest.mock import patch, mock_open
@@ -15,6 +17,7 @@ from src.api.client.champion import ChampionState, ChampionMetadata, ChampionPoo
 
 @pytest.fixture
 def mock_role_weights():
+    """Fixture for sample role weight configuration."""
     return {
         "Mage": {
             "Damage": 1.5,
@@ -35,6 +38,7 @@ def mock_role_weights():
 
 @pytest.fixture
 def mock_win_rates():
+    """Fixture for sample win rate values."""
     return {
         "64": (50.0, 0.0),
         "136": (55.0, 10.0),
@@ -44,6 +48,7 @@ def mock_win_rates():
 
 @pytest.fixture
 def mock_champions():
+    """Fixture for mock ChampionState objects."""
     return {
         "64": ChampionState(
             ChampionMetadata(
@@ -127,6 +132,7 @@ def mock_champions():
     },
 )
 def test_check_role_weight_sums(mock_weights):
+    """Test that role weight sums fall within expected tolerance."""
     check_role_weight_sums()
 
 
@@ -141,6 +147,7 @@ def test_check_role_weight_sums(mock_weights):
 )
 @pytest.mark.skip(reason="Postponing until evaluator refactor")
 def test_diminishing_returns(input_value, expected_output):
+    """Test diminishing returns formula for various inputs."""
     result = diminishing_returns(input_value)
     assert np.isclose(result, expected_output, atol=0.1)
 
@@ -149,6 +156,7 @@ def test_diminishing_returns(input_value, expected_output):
     "src.core.evaluator.role_weights", new_callable=lambda: {"Mage": {"Damage": 1.5}}
 )
 def test_apply_role_weights(mock_weights, mock_champions):
+    """Test weighted contribution calculation for a champion category."""
     champ = mock_champions["136"]
     result = apply_role_weights(champ, "Damage")
     assert result == 4.5
@@ -160,6 +168,7 @@ def test_apply_role_weights(mock_weights, mock_champions):
     read_data="id,champion,win_rate\n1,64,50.0\n2,136,55.0\n3,875,45.0",
 )
 def test_fetch_win_rates(mock_file):
+    """Test loading and normalization of win rate values."""
     win_rates = fetch_win_rates()
     assert win_rates["64"] == (50.0, 0.0)
     assert win_rates["136"][1] > 0
@@ -171,6 +180,7 @@ def test_fetch_win_rates(mock_file):
 def test_convert_grouped_to_champs(
     mock_fetch_wr, mock_load_champs, mock_champions, mock_win_rates
 ):
+    """Test grouped champion data is properly wrapped in a ChampionPool."""
     mock_load_champs.return_value = mock_champions
     mock_fetch_wr.return_value = mock_win_rates
 
@@ -184,6 +194,7 @@ def test_convert_grouped_to_champs(
 
 @patch("src.core.evaluator.diminishing_returns", side_effect=lambda x: x)
 def test_compute_composition_gain(mock_diminishing, mock_champions):
+    """Test champion composition gain and score calculation."""
     grouped_raw = {"team": ["64", "136"], "bench": ["875"], "player": ["64"]}
     pool = ChampionPool(grouped_raw, mock_champions)
     result = compute_composition_gain(pool)
@@ -195,6 +206,7 @@ def test_compute_composition_gain(mock_diminishing, mock_champions):
 @patch("src.core.evaluator.convert_grouped_to_champs")
 @patch("src.core.evaluator.compute_composition_gain")
 def test_evaluator(mock_compute_gain, mock_convert_champs, mock_champions):
+    """Test full evaluation flow from input to score output."""
     mock_convert_champs.return_value = {
         "team": [mock_champions["64"], mock_champions["136"]],
         "bench": [mock_champions["875"]],

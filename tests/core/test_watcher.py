@@ -1,3 +1,5 @@
+"""Unit tests for the core > test watcher."""
+
 import pytest
 from unittest.mock import patch, MagicMock, mock_open
 from src.core.watcher import (
@@ -11,6 +13,7 @@ from src.api.client.champion import ChampionPool
 
 @pytest.fixture
 def mock_evaluated_data():
+    """Fixture that returns a mocked ChampionPool for testing."""
     mock_lee_sin = MagicMock()
     mock_lee_sin.cid = "64"
     mock_lee_sin.meta.name = "Lee Sin"
@@ -37,12 +40,14 @@ def mock_evaluated_data():
 
 @patch("builtins.open", new_callable=mock_open)
 def test_log_final_champion_select(mock_file, mock_evaluated_data):
+    """Test that log_final_champion_select writes output to a file."""
     log_final_champion_select(mock_evaluated_data)
     mock_file.assert_called_once()
 
 
 @patch("sys.stdout.write")
 def test_display_lobby_champions(mock_stdout):
+    """Test that display_lobby_champions prints structured champion info."""
     mock_champ = MagicMock()
     mock_champ.cid = "64"
     mock_champ.meta.name = "Lee Sin"
@@ -73,31 +78,26 @@ def test_display_lobby_champions(mock_stdout):
     "src.core.watcher.evaluator", return_value={"team": [], "bench": [], "player": []}
 )
 @patch("src.core.watcher.display_lobby_champions")
-@patch("time.sleep", return_value=None)  # Avoid actual sleep calls in tests
+@patch("time.sleep", return_value=None)
 @pytest.mark.skip(reason="Postponing until watcher refactor")
 def test_monitor_lobby(
     mock_sleep, mock_display, mock_evaluator, mock_sanitize, mock_fetch, mock_get_status
 ):
     """Test that monitor_lobby fetches data, evaluates, and logs final state."""
-
-    # Simulating status transitions (game phase changes)
     status_sequence = [
-        Status.NONE.value,  # Pre-game state
-        Status.CHAMPSELECT.value,  # Champion select begins
-        Status.CHAMPSELECT.value,  # Champion select ongoing
-        Status.INPROGRESS.value,  # Game starts, should exit now
+        Status.NONE.value,
+        Status.CHAMPSELECT.value,
+        Status.CHAMPSELECT.value,
+        Status.INPROGRESS.value,
     ]
 
-    # Mock `get_status` to return statuses sequentially, then stay on INPROGRESS
     mock_get_status.side_effect = lambda *args, **kwargs: (
         status_sequence.pop(0) if status_sequence else Status.INPROGRESS.value
     )
 
-    # Run monitor_lobby in test mode with a max iteration cap
     monitor_lobby("port", "password", "puuid", max_iterations=5)
 
-    # Ensure expected function calls were made
-    assert mock_get_status.call_count >= 4  # Called multiple times
+    assert mock_get_status.call_count >= 4
     mock_display.assert_called()
     mock_evaluator.assert_called()
     mock_fetch.assert_called()
