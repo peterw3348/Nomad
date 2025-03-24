@@ -178,7 +178,7 @@ def assign_win_rates(pool: ChampionPool):
     Args:
         pool (ChampionPool): Champion pool to update with win rate data.
     """
-    raw_wr = load_win_rates(wr)
+    raw_wr = load_win_rates(wr)  # TODO: put in loader class
     norm_wr = normalize_win_rates(raw_wr)
     if debug:
         print("WR normalization stats:", norm_wr)
