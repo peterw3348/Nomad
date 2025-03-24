@@ -3,16 +3,24 @@ evaluator.py - ARAM Champion Evaluation and Scoring.
 
 This module processes League of Legends ARAM champion select data,
 evaluates champion picks based on role weights and win rates,
-and computes optimal team compositions.
+and computes optimal team compositions using a modular, class-based design.
 
 Functions:
-    - check_role_weight_sums(): Ensures role weight sums adhere to predefined tolerances.
-    - diminishing_returns(x): Applies a diminishing returns function for balancing champion impact.
-    - apply_role_weights(champ, category): Computes a champion's weighted contribution to a category.
-    - fetch_win_rates(verbose=False): Retrieves and normalizes champion win rates from data.
-    - convert_grouped_to_champs(grouped, verbose=False): Maps champion IDs to champion objects with attributes.
-    - compute_composition_gain(grouped_champs, verbose=False): Computes and normalizes composition gains for champions.
-    - evaluator(grouped, verbose=False): Main function for evaluating team composition and champion selection.
+    - check_role_weight_sums(): Validates that role weights per role sum to ~5 within a tolerance.
+    - diminishing_returns(x): Applies diminishing returns to scale category scores non-linearly.
+    - apply_role_weights(champ, category): Applies role-based weight multipliers to category values.
+    - convert_grouped_to_champs(grouped): Initializes a ChampionPool from grouped champ IDs.
+    - load_win_rates(filepath): Loads raw win rates from CSV into {cid: raw win rate} dictionary.
+    - normalize_win_rates(raw_wr): Converts raw win rates into normalized Z-scores.
+    - assign_win_rates(pool): Loads and assigns normalized win rates to each champion.
+    - compute_raw_composition_gains(pool): Calculates each champion’s raw team contribution.
+    - normalize_composition_gains(pool): Normalizes raw gains to Z-scores.
+    - assign_comp_gains(pool): Computes and normalizes composition gains for all available champions.
+    - compute_scores(pool): Computes final score using a weighted sum of composition gain and win rate.
+    - evaluator(grouped): Legacy-compatible function wrapper for Evaluator.evaluate().
+
+Classes:
+    - Evaluator: Encapsulates the full evaluation pipeline and champion pool.
 """
 
 import json
@@ -20,7 +28,6 @@ import numpy as np
 from src.utils import paths
 from src.api.client.champion import load_champions, ChampionPool
 
-# Load role weights and win rate data
 weights = paths.ASSETS_DIR / "classes" / "role_weights.json"
 wr = paths.ASSETS_DIR / "dd_wr.csv"
 
@@ -29,14 +36,15 @@ with open(weights, "r", encoding="utf-8") as file:
     role_weights = json.load(file)
 
 role_weight_sum_tolerance = 0.5
+debug = False
 
 
 def check_role_weight_sums():
     """
-    Validate that each role's weight sum remains within an acceptable range.
+    Validate that each role's category weights sum to approximately 5.
 
     Raises:
-        ValueError: If any role's weight sum deviates from the expected range.
+        ValueError: If the sum of weights for any role falls outside the acceptable tolerance range.
     """
     for role, weights in role_weights.items():
         total_weight = sum(weights.values())
@@ -55,162 +63,263 @@ check_role_weight_sums()
 
 def diminishing_returns(x):
     """
-    Apply a diminishing returns function to prevent extreme values from skewing results.
+    Apply a diminishing returns function to smooth out large category values.
+
+    This prevents champions with extremely high ratings from disproportionately skewing team composition scores.
 
     Args:
-        x (float): The input value to apply diminishing returns.
+        x (float): The raw category value to adjust.
 
     Returns:
-        float: Adjusted value based on diminishing returns curve.
+        float: Adjusted value with diminishing returns applied.
     """
     return 5 + (10 * (1 - np.exp(-(x - 5) / 4)))
 
 
 def apply_role_weights(champ, category):
     """
-    Compute a champion's weighted contribution to a specified category.
+    Compute a weighted category value based on the champion's role alignment.
+
+    This adjusts a champion’s rating in a category using predefined multipliers
+    depending on their primary and secondary roles.
 
     Args:
-        champ (Champ): The champion object containing role and rating data.
-        category (str): The category to apply weighting to.
+        champ (ChampionState): Champion object containing metadata and ratings.
+        category (str): One of the 5 rating categories (Damage, Toughness, etc.).
 
     Returns:
-        float: Weighted contribution of the champion to the given category.
+        float: Role-weighted contribution in the given category.
     """
     primary = role_weights.get(champ.meta.primary, {}).get(category, 1.0)
     secondary = role_weights.get(champ.meta.secondary, {}).get(category, 1.0)
     return champ.meta.ratings.get(category, 0) * max(primary, secondary)
 
 
-def fetch_win_rates(verbose=False):
+def convert_grouped_to_champs(grouped):
     """
-    Retrieve and normalizes champion win rates from a data source.
+    Convert raw grouped champion ID data into a structured ChampionPool object.
+
+    This initializes the champion pool using loaded champion metadata and
+    categorizes them into team, bench, and player selections.
 
     Args:
-        verbose (bool, optional): If True, prints normalization statistics. Defaults to False.
+        grouped (dict): Dictionary containing 'team', 'bench', and 'player' champion IDs.
 
     Returns:
-        dict: A dictionary mapping champion IDs to tuples of (raw win rate, normalized win rate).
-    """
-    win_rates, raw_values = {}, []
-    with open(wr, "r", encoding="utf-8") as f:
-        next(f)
-        for line in f:
-            _, cid, wr_val = line.strip().split(",")[:3]
-            cid = cid.strip()
-            raw = float(wr_val.strip().strip("%"))
-            win_rates[cid] = raw
-            raw_values.append(raw)
-    mean, std = np.mean(raw_values), np.std(raw_values)
-    for cid, raw in win_rates.items():
-        norm = round(((raw - mean) / std) * 50, 2) if std > 0 else 0
-        win_rates[cid] = (raw, norm)
-    if verbose:
-        print(f"WR normalization: mean={mean:.2f}, std={std:.2f}")
-    return win_rates
-
-
-def convert_grouped_to_champs(grouped, verbose=False):
-    """
-    Map grouped champion IDs to their corresponding champion objects with attributes.
-
-    Args:
-        grouped (dict): A dictionary containing team, bench, and player champion IDs.
-        verbose (bool, optional): If True, prints additional debug info. Defaults to False.
-
-    Returns:
-        dict: A structured dictionary containing mapped champions for team, bench, and player.
+        ChampionPool: Object encapsulating grouped and categorized champions.
     """
     champions = load_champions()
-    winrates = fetch_win_rates(verbose)
-    for champ in champions.values():
-        if str(champ.cid) in winrates:
-            champ.raw_wr, champ.norm_wr = winrates[str(champ.cid)]
     return ChampionPool(grouped, champions)
 
 
-def compute_composition_gain(pool: ChampionPool, verbose=False):
+def load_win_rates(filepath) -> dict[str, float]:
     """
-    Compute the composition gain for each champion by evaluating their impact on team composition.
+    Load raw ARAM win rates from a CSV file.
+
+    The function reads a CSV containing champion IDs and their win rates
+    and returns a dictionary mapping each champion ID (as a string) to
+    its win rate as a float (0-100 scale).
+
+    The CSV is expected to have the format:
+        <name>,<champion_id>,<win_rate>...
 
     Args:
-        grouped_champs (dict): Dictionary of grouped champions (team, bench, player).
-        verbose (bool, optional): If True, prints normalization statistics. Defaults to False.
+        filepath (str or Path): Path to the CSV file containing win rate data.
 
     Returns:
-        dict: Updated grouped champions with computed and normalized composition gains.
+        dict[str, float]: A mapping of champion IDs to raw win rate percentages.
+    """
+    raw_wr = {}
+    with open(filepath, "r", encoding="utf-8") as f:
+        next(f)
+        for line in f:
+            _, cid, wr_val = line.strip().split(",")[:3]
+            raw_wr[cid.strip()] = float(wr_val.strip().strip("%"))
+    return raw_wr
+
+
+def normalize_win_rates(raw_wr: dict[str, float]) -> dict[str, tuple[float, float]]:
+    """
+    Normalize raw win rates using Z-score scaling.
+
+    This function transforms raw win rate percentages into a normalized
+    Z-score-based scale (multiplied by 50), allowing fair comparison of
+    win rates independent of average performance.
+
+    The resulting value is centered around 0 with positive values indicating
+    above-average champions and negative values indicating below-average ones.
+
+    Args:
+        raw_wr (dict[str, float]): Dictionary of champion IDs to raw win rates (0-100%).
+
+    Returns:
+        dict[str, tuple[float, float]]: Dictionary mapping champion IDs to a tuple of:
+            - raw win rate (float)
+            - normalized win rate (float, Z-score * 50)
+    """
+    raw_values = list(raw_wr.values())
+    mean, std = np.mean(raw_values), np.std(raw_values)
+    return {
+        cid: (
+            raw,
+            round(((raw - mean) / std) * 50, 2) if std > 0 else 0,
+        )
+        for cid, raw in raw_wr.items()
+    }
+
+
+def assign_win_rates(pool: ChampionPool):
+    """
+    Load and assign raw and normalized win rates to each champion in the pool.
+
+    Applies both raw percentages and Z-score scaled values (×50) to all champions
+    in `available` and `unavailable`. Champions missing from the data are skipped.
+
+    Args:
+        pool (ChampionPool): Champion pool to update with win rate data.
+    """
+    raw_wr = load_win_rates(wr)  # TODO: put in loader class
+    norm_wr = normalize_win_rates(raw_wr)
+    if debug:
+        print("WR normalization stats:", norm_wr)
+    for champ in pool.available + pool.unavailable:
+        cid = str(champ.cid)
+        if cid in norm_wr:
+            champ.raw_wr, champ.norm_wr = norm_wr[cid]
+
+
+def compute_raw_composition_gains(pool: ChampionPool):
+    """
+    Compute how much each available champion would improve the current team composition.
+
+    The function calculates a "raw gain" for each champion by assessing their
+    contribution across all 5 categories using role weighting and diminishing returns.
+
+    Args:
+        pool (ChampionPool): The pool containing available and unavailable champions.
     """
     base = {cat: 0 for cat in ["Damage", "Toughness", "Control", "Mobility", "Utility"]}
     for champ in pool.unavailable:
         for cat in base:
             base[cat] += champ.meta.ratings.get(cat, 0)
 
-    player_gain = sum(
-        diminishing_returns(base[cat] + apply_role_weights(pool.player, cat))
-        - diminishing_returns(base[cat])
-        for cat in base
-    )
-
-    gains = []
-    for champ in pool.bench:
+    for champ in pool.available:
         gain = sum(
             diminishing_returns(base[cat] + apply_role_weights(champ, cat))
             - diminishing_returns(base[cat])
             for cat in base
         )
         champ.raw_gain = gain
-        gains.append(gain)
-
-    all_gains = gains + [player_gain]
-    mean, std = np.mean(all_gains), max(np.std(all_gains), 1e-6)
-
-    if verbose:
-        print(f"Gain normalization: mean={mean:.4f}, std={std:.4f}")
-
-    for champ in pool.bench:
-        champ.norm_gain = round(((champ.raw_gain - mean) / std) * 50, 2)
-        champ.score = round((champ.norm_gain * 0.7) + (champ.norm_wr * 0.3), 2)
-
-    pool.player.raw_gain = player_gain
-    pool.player.norm_gain = round(((player_gain - mean) / std) * 50, 2)
-    pool.player.score = round(
-        (pool.player.norm_gain * 0.7) + (pool.player.norm_wr * 0.3), 2
-    )
-
-    pool.bench.sort(key=lambda c: c.score, reverse=True)
-    return pool
 
 
-def evaluator(grouped, verbose=False):
+def normalize_composition_gains(pool: ChampionPool):
     """
-    Evaluate team composition and champion selection for ARAM mode.
+    Normalize raw composition gains into Z-scores to produce `norm_gain`.
+
+    This ensures fair comparison between champions, especially when some
+    raw gain values are significantly higher or lower than others.
 
     Args:
-        grouped (dict): A dictionary containing grouped champion data.
-        verbose (bool, optional): If True, prints evaluation details. Defaults to False.
-
-    Returns:
-        dict: Evaluation results with composition gains and champion scores.
+        pool (ChampionPool): The champion pool with raw gain values populated.
     """
-    pool = convert_grouped_to_champs(grouped, verbose)
-    return compute_composition_gain(pool, verbose)
+    gains = [champ.raw_gain for champ in pool.available]
+    mean, std = np.mean(gains), max(np.std(gains), 1e-6)
+    if debug:
+        print(f"Gain normalization: mean={mean:.4f}, std={std:.4f}")
+    for champ in pool.available:
+        champ.norm_gain = round(((champ.raw_gain - mean) / std) * 50, 2)
+
+
+def assign_comp_gains(pool: ChampionPool):
+    """
+    Compute and normalize composition gains for all available champions.
+
+    Combines raw gain calculation and Z-score normalization into a single step.
+
+    Args:
+        pool (ChampionPool): Champion pool to update with composition gain data.
+    """
+    compute_raw_composition_gains(pool)
+    normalize_composition_gains(pool)
+
+
+def compute_scores(pool: ChampionPool):
+    """
+    Compute the final score for each available champion.
+
+    The score is a weighted blend of normalized composition gain (70%)
+    and normalized win rate (30%). This value determines champion ranking
+    within the bench.
+
+    Args:
+        pool (ChampionPool): The pool of champions with norm_gain and norm_wr assigned.
+    """
+    for champ in pool.available:
+        champ.score = round((champ.norm_gain * 0.7) + (champ.norm_wr * 0.3), 2)
+    pool.bench.sort(key=lambda c: c.score, reverse=True)
+
+
+def evaluator(grouped):
+    """
+    Encapsulate the full ARAM evaluation pipeline for a given set of champion IDs.
+
+    This class allows modular control over evaluation, making it easier to test,
+    debug, or extend individual evaluation steps.
+    """
+    return Evaluator(grouped).evaluate()
+
+
+class Evaluator:
+    """
+    Handles ARAM champion evaluation using win rates and role-based composition logic.
+
+    This class encapsulates the full evaluation pipeline for a given lobby snapshot,
+    returning a ChampionPool enriched with scores, ratings, and normalized metrics.
+    """
+
+    def __init__(self, grouped):
+        """
+        Initialize the evaluator with grouped champion IDs.
+
+        Args:
+            grouped (dict): Dictionary containing 'team', 'bench', and 'player' champion IDs.
+        """
+        self.pool = convert_grouped_to_champs(grouped)
+
+    def evaluate(self):
+        """
+        Run the full evaluation pipeline and return the enriched ChampionPool.
+
+        Steps:
+            1. Assigns and computes normalized winrates
+            2. Compute and normalize compositional gains
+            3. Compute final scores.
+
+        Returns:
+            ChampionPool: Pool with scores and metadata populated.
+        """
+        assign_win_rates(self.pool)
+        assign_comp_gains(self.pool)
+        compute_scores(self.pool)
+        return self.pool
 
 
 if __name__ == "__main__":
     """Entry point for running the champion evaluation script with sample data."""
+    debug = True
     test_grouped = {
         "team": [136, 64, 54, 875, 498],
         "bench": [203, 517, 86, 245, 141, 893],
         "player": [498],
     }
-    result = evaluator(test_grouped, verbose=True)
+    result = Evaluator(test_grouped).evaluate()
 
     test_grouped_2 = {
         "team": [136, 64, 54, 875, 893],
         "bench": [203, 517, 86, 245, 141, 498],
         "player": [893],
     }
-    result = evaluator(test_grouped_2, verbose=True)
+    result = Evaluator(test_grouped).evaluate()
 
 # NOTE: norm_gain and norm_wr is now uncapped and fully based on Z-score scaling
 # The following applies more to norm_gain, as raw_wr is naturally bounded by 0-100
