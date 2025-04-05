@@ -2,7 +2,7 @@
 
 import pytest
 from unittest.mock import patch, MagicMock, mock_open
-from src.core.watcher import (
+from src.core.watcher.watcher import (
     log_final_champion_select,
     display_lobby_champions,
     monitor_lobby,
