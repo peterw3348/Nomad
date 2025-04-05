@@ -16,7 +16,7 @@ python
 """
 
 from src.api.client.acquire import get_credentials
-from src.core.watcher import monitor_lobby
+from src.core.watcher.watcher import monitor_lobby
 
 
 def main():
